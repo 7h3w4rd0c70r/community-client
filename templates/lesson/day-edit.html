@@ -1,0 +1,18 @@
+<input class="day" type="number" maxlength="2" min="01" max="31" name="date-from-day" value="<%- dayNumber %>"
+       required="required"/>
+<select class="month" required="required">
+    <option value="01" <%- isMonthSelected(0,  monthIndex) %>>January</option>
+    <option value="02" <%- isMonthSelected(1,  monthIndex) %>>February</option>
+    <option value="03" <%- isMonthSelected(2,  monthIndex) %>>March</option>
+    <option value="04" <%- isMonthSelected(3,  monthIndex) %>>April</option>
+    <option value="05" <%- isMonthSelected(4,  monthIndex) %>>May</option>
+    <option value="06" <%- isMonthSelected(5,  monthIndex) %>>June</option>
+    <option value="07" <%- isMonthSelected(6,  monthIndex) %>>July</option>
+    <option value="08" <%- isMonthSelected(7,  monthIndex) %>>August</option>
+    <option value="09" <%- isMonthSelected(8,  monthIndex) %>>September</option>
+    <option value="10" <%- isMonthSelected(9,  monthIndex) %>>October</option>
+    <option value="11" <%- isMonthSelected(10, monthIndex) %>>November</option>
+    <option value="12" <%- isMonthSelected(11, monthIndex) %>>December</option>
+</select>
+<input class="year" type="number" maxlength="4" min="<%- getYear(min) %>" max="<%- getYear(max) %>"
+       value="<%- year %>" required="required"/>

@@ -1,0 +1,49 @@
+<div class="sort">Sorted by:
+    <select id="sort">
+        <option value="title">Title</option>
+        <option value="createdBy">Author</option>
+        <option value="image">Image</option>
+        <option value="activityID">Id</option>
+    </select>
+
+    <div id="filter">
+        <input id="keyWordList" type="text" size="255" placeholder="Write here a searching phrase"/>
+        <input type="button" id="search" value="Search" alt="Apply searching criteria"/>
+    </div>
+
+    <a title="Show Activities in a Detailed List." href="#activities/detailedList"
+       class="view-button-1' detailed-list-icon"></a>
+    <a title="Show Activities in a Grid." href="#activities/grid" class="view-button-2'  grid-icon"></a>
+    <a id="refresh-button" title="Refresh Data" class="view-button-3' refresh-icon"></a>
+</div>
+
+<table class="list">
+    <tr>
+        <th id="id">Id</th>
+        <th id="title">Title</th>
+        <th id="focus">Focus</th>
+        <th id="course">Course</th>
+        <th id="author">Author</th>
+        <th id="level">Level</th>
+        <th id="theme">Theme</th>
+        <th id="isRepeatable">Is repeatable</th>
+        <th id="duration">Duration</th>
+    </tr>
+</table>
+
+<div class="folders">
+    <a class="folder"
+       href="#activities/grid"
+       title="All Public Activities">
+        <div class="folder-button folder-icon"></div>
+        <span>All</span>
+    </a>
+    <a class="folder"
+       href="#activities/grid"
+       title="Activities Created By Me">
+        <div class="folder-button folder-icon"></div>
+        <span>My Own</span>
+    </a>
+
+    <div class="folder-button add-folder"/>
+</div>

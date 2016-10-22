@@ -1,0 +1,12 @@
+<td class="center top">
+    <span><%- duration %> Minutes</span>
+</td>
+<td class="activity">
+    <%
+    if(isNotEmpty(name)){ %><h3><%- name %></h3> <% }
+    if(isNotEmpty(description)){ %><p><%- replaceNewlinesByBreaks(description)%></p><% }
+    %>
+</td>
+<td class="center">
+    <input type="checkbox" disabled="disabled" <%- checked(status) %> />
+</td>

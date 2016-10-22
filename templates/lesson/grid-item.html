@@ -1,0 +1,5 @@
+<div><%- getTime(start)%><br/><%- getTime(end)%></div>
+<div class="course-<%- courseID %>"></div>
+<div class="group-<%- groupID %>"></div>
+<div class="location-<%- locationID %>"></div>
+<% _.each( teachers, function(teacher){ %><div class="teacher-<%- teacher.personID %>"></div><% }); %>

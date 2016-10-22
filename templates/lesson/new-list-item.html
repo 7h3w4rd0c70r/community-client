@@ -1,0 +1,32 @@
+<td class="right"></td>
+<td><%- getDay(start) %></td>
+<td><%- getDayName(start) %></td>
+<td><%- getTime(start) %></td>
+<td><%- getTime(end) %></td>
+<td><%- getDuration(start,end) %> Minutes</td>
+<td>
+    <div class="location-<%- locationID %>"></div>
+    <div class="location-conflicts"></div>
+</td>
+<td>
+    <div class="group-<%- groupID %>"></div>
+    <div class="group-conflicts"></div>
+</td>
+<td>
+    <div class="course id-<%- courseID %>"></div>
+</td>
+<td>
+    <% _.each(teachers, function(teacher){ %>
+    <div>
+        <div class="teacher-<%- teacher.personID %>"></div>
+        <div class="teachers-conflicts"></div>
+    </div>
+    <%}); %>
+</td>
+<td class="text-right">
+    <% if(lessonID === null){ %>
+    <button class="btn btn-sm btn-danger delete"><span class="glyphicon glyphicon-remove"></span></button>
+    <% } else {%>
+    <button class="btn btn-sm btn-primary open">Open</button>
+    <% } %>
+</td>

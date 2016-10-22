@@ -1,0 +1,131 @@
+<div class="jumbotron">
+    <h1>Welcome to LAMPA!</h1>
+    <p>LAMPA is a powerful, yet very user-friendly, set of tools for teachers, students and language schools. Once you
+        are all set up, it will save you time, it will facilitate lesson continuity, and it can help you supplement you
+        income.</p>
+    <% if (isAdmin()){ %>
+    <div class="well">
+        <p>
+            <strong>Step 1.</strong>
+            To use LAMPA to its full potential, you must set up six basic elements in the <strong><span
+                class="glyphicon glyphicon-cog"></span> SET UP</strong> menu:</p>
+        <ol>
+            <li><p>Set up your <strong data-toggle="tooltip" data-original-title="“School” is a broad term in LAMPA; it can be an actual school,
+                an agency, two or more teachers working together, or an individual teacher using LAMPA for their own teaching">school</strong>
+                by
+                checking or editing the information LAMPA has already filled in using your registration information and
+                add the
+                following:
+                <strong data-toggle="tooltip"
+                        data-original-title="This tells your timetable when the display should begin">School year starts
+                    on</strong>,
+                <strong data-toggle="tooltip"
+                        data-original-title="This tells you when your timetable display should stop">School year ends
+                    on</strong>,
+                <strong data-toggle="tooltip"
+                        data-original-title="This will be the default duration for a single lesson. It is important for calculating teaching hours, invoicing hours and lesson scheduling">Lesson
+                    duration</strong></p>
+            </li>
+            <li><p>Name and invite
+                <strong
+                        data-toggle="tooltip"
+                        data-original-title="If you are the only teacher, this has already been done for you, but you can edit it at any time or you
+                can add new teachers who start working with you later">teachers</strong></p>
+            </li>
+            <li><p>Define the various <strong data-toggle="tooltip"
+                                              data-original-title="One location has already been added for you, but you may edit the details at any time">locations</strong>
+                where you
+                expect lessons to take place, e.g. room numbers, firms,workstations for online lessons, etc.</p>
+            </li>
+            <li><p>Define the <strong data-toggle="tooltip" data-original-title="There is one course already set up for you to get you started,
+                but you may edit it and add others. In LAMPA, you need a minimum of one course and it is not necessary
+                to define it specifically,
+                but if you have a language school, for example, you may wish to add courses in various languages,
+                levels,
+                or specific subjects.">courses</strong> that you intend to teach</p>
+            </li>
+            <li><p>Designate your <strong data-toggle="tooltip"
+                                          data-original-title="One empty group has been set up to get you started, but you may edit it at anytime">groups</strong>,
+                i.e. individuals or classes taking a course at a given time and place</p>
+            </li>
+            <li><p>Name and invite your
+                <strong data-toggle="tooltip"
+                        data-original-title="In the near future, you will also be able to invite clients, e.g. human resource mangers, company representatives or guardians who are sponsoring the student’s learning">
+                    students
+                </strong> by
+                entering their names and emails
+            </p>
+            </li>
+        </ol>
+    </div>
+    <div class="well">
+        <p><strong>N.B.</strong>
+            <i>When setting up all other users, i.e. teachers, students or clients, it is important that you enter
+            their
+            email. LAMPA uses email addresses as unique user I.D.s, therefore this is essential in creating the user
+            account
+            and no two users may share the same email address.</i></p>
+    </div>
+    <div class="well">
+        <p><strong>Step 2.</strong>
+            After you have set up your basic elements, you can start adding lessons using the
+            <strong>Add</strong> feature in the <span class="glyphicon glyphicon-calendar"></span> <strong>MY
+                LESSONS</strong> menu.
+            Click on <strong>Add</strong> and do the following:</p>
+        <ol>
+            <li><p>Select the Group you would like to add to your timetable. If you have forgotten to add the
+                group, no worries, you can add a new group using the <strong>Add Group</strong> button on the right.</p>
+            </li>
+            <li><p>Use the calendar icon to select the date on which you would like to begin the course or add a
+                single lesson.</p>
+            </li>
+            <li><p>Choose an <strong>End Date</strong> for the course or last lesson, or select
+                <strong>By Lesson Count</strong> if you would prefer
+                to designate a specific number of lessons to be taught without a concrete end date.</p>
+            </li>
+            <li><p>Click Add Lessons and designate the day of the week, the start time, the duration, Teacher and
+                Location.</p></li>
+            <li><p>Repeat if the group is to have more than one lesson per week.</p></li>
+            <li><p>After all lessons for the group have been listed, click on <strong>Generate Lessons</strong></p>
+            </li>
+            <li><p>Check the list LAMPA has generated.If there are mistakes or lessons you wish to remove, you can
+                un-check the lessons using the check boxes at the right</p></li>
+            <li><p>Click on <strong>Save Lessons</strong></p></li>
+            <li><p>Click on the
+                <span class="glyphicon glyphicon-calendar"></span> <strong>MY LESSONS</strong>
+                menu and open a timetable to check them</p></li>
+            <li><p>Repeat to add lessons for other groups.</p></li>
+        </ol>
+    </div>
+    <% } %>
+    <div class="well">
+        <p>
+            <% if(isAdmin()){ %><strong>Step 3.</strong> <% } %>Don’t forget to invite other teachers and schools to become LAMPA partners and to
+            use LAMPA also!
+            The more teachers and students who use the system based on your initial invitation, the more you
+            can supplement your regular teaching income.
+            To invite teachers so that they can start using LAMPA’s tools for free, do the following:</p>
+        <ol>
+            <li><p>Click on <span class="glyphicon glyphicon-send"></span> <strong>INVITE PEERS</strong></p></li>
+            <li><p>Enter the teacher’s e-mail address</p></li>
+            <li><p>Personalize the invitation message</p></li>
+            <li>
+                <p>Click on
+                    <strong>Send</strong>
+                </p>
+            </li>
+        </ol>
+    </div>
+    <div class="well">
+        <h2>How can LAMPA supplement a partner’s income?</h2>
+        <p>LAMPA provides mobile learning games, personal dictionaries and course tracking tools for students.
+            When students download the app and buy a 1-year license, a portion of the purchase price goes directly back
+            to the teacher or school that has invited the student; another portion goes back to the teacher or the
+            school that
+            invited that teacher, and so on.
+            This is repeated on five levels. Simply, the more new users you invite, the more you can earn.</p>
+    </div>
+</div>
+
+
+

@@ -1,0 +1,15 @@
+<h2>My Dictionary
+    <a href="#dictionary/add" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span></a>
+</h2>
+<table class="table numbered table-hover">
+    <thead>
+    <tr>
+        <th>#</th>
+        <th id="term" class="clickable">Vocabulary <%= getSortAndOrder(sort,"term",order) %></th>
+        <th id="translation" class="clickable">Note <%= getSortAndOrder(sort,"translation",order) %></th>
+        <th id="score" class="clickable">Rating <%= getSortAndOrder(sort,"score",order) %></th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody></tbody>
+</table>

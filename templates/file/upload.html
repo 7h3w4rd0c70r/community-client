@@ -1,0 +1,13 @@
+<form id="attachment-upload"
+      enctype="multipart/form-data"
+      method="post"
+      action="<%- link %>"
+      target="upload-frame">
+    <fieldset>File</fieldset>
+    <input id="attachment" name="attachment" type="file"/>
+    <input type="submit" value="Upload File"/>
+</form>
+
+<iframe id="response" name="upload-frame" onload="onLoadFinish(this);"
+        style="width: 200px; height: 50px; display: block;"></iframe>
+

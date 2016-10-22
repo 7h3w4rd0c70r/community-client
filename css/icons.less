@@ -1,0 +1,317 @@
+@import "colors.less";
+@import "sizes.less";
+
+@icon-size: 40px;
+
+.googlePlay-icon {
+  height: auto;
+  width: 240px;
+}
+
+.appStore-icon {
+  height: auto;
+  width: 210px;
+  margin: 16px;
+}
+
+.icon {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: @icon-size @icon-size;
+  background-color: transparent;
+  color: white;
+}
+
+@button-size: 40px;
+.view-button-1,
+.view-button-2,
+.view-button-3,
+.folder-button {
+  display: inline-block;
+  position: absolute;
+  right: 5px;
+  width: @button-size;
+  height: @button-size;
+  text-decoration: none;
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: @button-size @button-size;
+}
+
+.view-button-1 {
+  top: 0;
+}
+
+.view-button-2 {
+  top: 0;
+  right: @button-size + 5px + 5px;
+}
+
+.view-button-3 {
+  top: 0;
+  right: 2 * (@button-size + 5px + 5px);
+}
+
+.folder, .folder:hover, .folder:visited {
+  text-decoration: none;
+  padding-top: 10px;
+  padding-left: @button-size;
+  padding-right: 2px;
+  position: relative;
+  display: inline-block;
+  width: auto;
+  height: @button-size;
+  div {
+    left: 0;
+  }
+  span {
+    color: #000000;
+    position: relative;
+    top: 5px;
+    text-decoration: none;
+  }
+}
+
+.folder:hover {
+  span {
+    color: @lampa-red;
+  }
+}
+
+.folder-button {
+  bottom: 5px;
+}
+
+.add-folder {
+  position: absolute;
+  background-image: url("images/folder-add.svg");
+}
+
+.home {
+  background-image: url("images/community.svg");
+}
+
+.timetable {
+  background-image: url("images/calendar.svg");
+}
+
+.records {
+  background-image: url("images/save.svg");
+}
+
+.courses {
+  background-image: url("images/courses.svg");
+}
+
+.memos {
+  background-image: url("images/memos.svg");
+}
+
+.settings {
+  background-image: url("images/settings.svg");
+}
+
+.extras {
+  //background-image: url("images/extras.svg");
+  background-image: url("images/resources.svg");
+}
+
+.account {
+  background-image: url("images/account.svg");
+}
+
+.report {
+  background-image: url("images/report.svg");
+}
+
+/*******************************************/
+
+.refresh-icon {
+  background-image: url("images/refresh.svg");
+}
+
+.folder-icon {
+  background-image: url("images/folder.svg");
+}
+
+.folder-add-icon {
+  background-image: url("images/folder-add.svg");
+}
+
+.grid-icon {
+  background-image: url("images/grid.svg");
+}
+
+.list-icon {
+  background-image: url("images/list.svg");
+}
+
+.detailed-list-icon {
+  background-image: url("images/details.svg");
+}
+
+/** Activity Types *****************************************/
+.activity-big-icon {
+  display: block;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+}
+
+.activity-envelop {
+  position: relative;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.activity-icon {
+  position: relative;
+  padding: 25%;
+}
+
+.activity-icon-list {
+  display: inline-block;
+  position: relative;
+  top: 0;
+  height: 165px;
+  width: 100%;
+  overflow: auto;
+  border: 1px solid transparent;
+}
+
+.activity-envelop {
+  .import {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: unset;
+    top: unset;
+    z-index: 110;
+  }
+}
+
+.item-icon {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  text-decoration: none;
+  border: none;
+  vertical-align: middle;
+  font-size: 39px;
+  line-height: 50px;
+}
+
+.item-icon-sm {
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  text-decoration: none;
+  border: none;
+  vertical-align: middle;
+  font-size: 20px;
+  line-height: 25px;
+}
+
+.index-0 {
+  color: @index-0;
+}
+
+.index-1 {
+  color: @index-1;
+}
+
+.index-2 {
+  color: @index-2;
+}
+
+.index-3 {
+  color: @index-3;
+}
+
+.index-4 {
+  color: @index-4;
+}
+
+.index-5 {
+  color: @index-5;
+}
+
+.index-6 {
+  color: @index-6;
+}
+
+.index-7 {
+  color: @index-7;
+}
+
+.index-8 {
+  color: @index-8;
+}
+
+.ic-sm, .ic-small {
+  vertical-align: middle;
+  font-size: 20px;
+}
+
+.ic-lg {
+  font-size: 40px;
+}
+
+.ic-1 {
+  color: #000000;
+}
+
+.ic-2 {
+  color: #808080;
+}
+
+.ic-3 {
+  color: @lampa-1;
+}
+
+.ic-4 {
+  color: @lampa-2;
+}
+
+.ic-5 {
+  color: @lampa-3;
+}
+
+.ic-6 {
+  color: @lampa-4;
+}
+
+.ic-7 {
+  color: @lampa-5;
+}
+
+.ic-8 {
+  color: @lampa-6;
+}
+
+.ic-9 {
+  color: @lampa-7;
+}
+
+.ic-10 {
+  color: @lampa-8;
+}
+
+.ic-11 {
+  color: @lampa-9;
+}
+
+.ic-12 {
+  color: @lampa-10;
+}

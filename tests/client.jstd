@@ -1,0 +1,35 @@
+load:
+- ../libs/jquery.js
+- ../libs/underscore.js
+- ../libs/backbone.js
+- ../libs/backbone.marionette.js
+- ../libs/moment-with-locales.js
+
+- ../js/services-dev.js
+- ../js/app.js
+- ../js/helpers/formHelpers.js
+- ../js/helpers/timeFunctions.js
+- ../js/helpers/activityHelpers.js
+- ../js/helpers/statusHelpers.js
+- ../js/helpers/userHelpers.js
+- ../js/helpers/lessonHelpers.js
+- ../js/helpers/cookiesHelpers.js
+- ../js/helpers/menuHelpers.js
+- ../js/helpers/reportHelpers.js
+
+- ../js/core/entitiesApi.js
+- ../js/entities/key.js
+- ../js/entities/lesson.js
+
+test:
+- client/helpers/test.formHelpers.js
+- client/helpers/test.timeFunctions.js
+- client/helpers/test.activityHelpers.js
+- client/helpers/test.statusHelpers.js
+- client/helpers/test.userHelpers.js
+- client/helpers/test.lessonHelpers.js
+- client/helpers/test.reportHelpers.js
+- client/helpers/test.menuHelpers.js
+
+- client/entities/test.key.js
+- client/entities/test.lesson.js

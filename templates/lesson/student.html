@@ -1,0 +1,88 @@
+<div class="col-sm-12">
+    <div id="buttons"></div>
+</div>
+
+<div id="bar" class="col-xs-12">
+    <div class="box first-box col-xs-6 col-sm-3" id="datetime"></div>
+    <div class="box col-xs-6 col-sm-2">
+        <div class="panel panel-default">
+            <div class="panel-heading">Group</div>
+            <div id="group" class="panel-body"></div>
+        </div>
+    </div>
+    <div class="box col-xs-4 col-sm-2">
+        <div class="panel panel-default">
+            <div class="panel-heading">Location</div>
+            <div id="location" class="panel-body"></div>
+        </div>
+    </div>
+    <div class="box col-xs-4 col-sm-2">
+        <div class="panel panel-default">
+            <div class="panel-heading">Course</div>
+            <div id="course" class="panel-body"></div>
+        </div>
+    </div>
+    <div id="teachers"></div>
+</div>
+<% if(status!=2){ %>
+<div class="col-xs-12">
+    <div class="well text-center">
+        <% if(status == 0 || status == 1) { %>This lesson is unreported.<% }%>
+        <% if(status == 3) {%>This lesson was canceled.<% }%>
+    </div>
+</div>
+<% }%>
+<div class="col-xs-12">
+    <div class="panel panel-default">
+        <div class="panel-heading">Attendance</div>
+        <div class="panel-body">
+            <div class="form-group">
+                <div class="col-sm-12 text-left">
+                    <p class="form-control-static">
+                        <span class="flag <%- getAbsenceStatus(status, getDateFromJSON(start), isPresent, isExcused) %>"></span>
+                        <%- getAbsenceStatus(status, getDateFromJSON(start),isPresent,isExcused)%>
+                    </p>
+                </div>
+            </div>
+            <% if (note && note!=='') { %>
+            <div class="form-group">
+                <div class="col-sm-12 text-center">
+                    <p class="form-control-static"><%- note %></p>
+                </div>
+            </div>
+            <% } %>
+        </div>
+    </div>
+</div>
+<% if (status == 2){ %>
+<div class="col-xs-12">
+    <form id="lesson" role="form" class="form-horizontal">
+        <div class="panel panel-default">
+            <div id="header" class="panel-body"></div>
+        </div>
+    </form>
+</div>
+<div class="col-xs-12">
+    <div class="panel panel-default ">
+        <div class="panel-heading">Activities</div>
+        <div class="panel-body">
+            <div id="plans"></div>
+        </div>
+    </div>
+</div>
+<div class="col-xs-12">
+    <div class="panel panel-default">
+        <div class="panel-heading">Homework</div>
+        <div class="panel-body">
+            <div id="homework"></div>
+        </div>
+    </div>
+</div>
+<div class="col-xs-12" id="dictionary"></div>
+<% } else {%>
+<div id="header"></div>
+<div id="plans"></div>
+<div id="homework"></div>
+<div id="dictionary"></div>
+<% } %>
+</div>

@@ -1,0 +1,238 @@
+@import "font.less";
+@import "sizes.less";
+@import "colors.less";
+
+.description {
+  height: 100px;
+}
+
+.required,
+input[required="required"],
+select[required="required"],
+textarea[required="required"] {
+  background-color: @required;
+}
+
+input[readonly="true"],
+select[readonly="true"],
+textarea[readonly="true"] {
+  background-color: @face;
+}
+
+.middle-box, .middle-button {
+  position: relative;
+  width: 150px;
+  height: 40px;
+  margin-left: -75px !important;
+  left: 50%;
+}
+
+.middle-box {
+  width: 400px;
+  margin-left: -200px;
+  text-align: center;
+}
+
+.box {
+  text-align: left;
+  border: 1px solid @item-border;
+  padding: 5px 5px 5px 5px;
+  background-color: @item-background;
+  box-shadow: 2px 2px 12px -4px gray;
+  z-index: 1;
+  label {
+    width: @label-box-width;
+  }
+}
+
+@spinner-size: 100px;
+
+#spinner {
+  position: fixed;
+  background-color: transparent;
+  width: @spinner-size;
+  height: @spinner-size;
+  margin-left: -@spinner-size / 2;
+  margin-top: -@spinner-size / 2;
+  z-index: 1000;
+  left: 50%;
+  top: 50%;
+}
+
+#filter {
+  //position: absolute;
+  position: relative;
+  display: inline-block;
+  //top: 3px;
+  //padding-top: 7px;
+  //left: 100px;
+}
+
+.message {
+  position: absolute;
+  top: 50%;
+  width: 160%;
+  text-align: center;
+}
+
+.center {
+  text-align: center;
+}
+
+.middle {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+}
+
+@activity-width: 585px;
+
+.lesson-template-activity-order-header {
+  width: 200px;
+}
+
+.lesson-template-activity-title {
+  width: @activity-width;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 3px;
+  margin-bottom: -1px;
+  padding: 1px;
+}
+
+.lesson-template-activity-instructions {
+  width: @activity-width;
+  height: auto;
+  overflow: hidden;
+  margin: 0;
+  margin-bottom: 3px;
+  padding: 1px;
+}
+
+.lesson-template-activity-instructions-header {
+  width: @activity-width;
+}
+
+.middle {
+  vertical-align: middle;
+}
+
+.top {
+  vertical-align: top;
+}
+
+.red {
+  color: @lampa-red;
+}
+
+.up, .down, .delete {
+  display: block !important;
+  text-align: center !important;
+}
+
+.no-data {
+  width: 100%;
+  text-align: center;
+  color: @lampa-red;
+}
+
+label.no-space {
+  width: auto;
+  margin: 0 !important;
+  padding: 5px !important;
+  vertical-align: middle;
+  input[type='checkbox'] {
+    margin: 0 !important;
+    padding: 0 !important;
+    vertical-align: middle;
+  }
+  span {
+    margin-bottom: 2px;
+  }
+}
+
+.check-boxes-container {
+  border: 1px solid @item-border;
+  padding: 5px;
+  padding-top: 0px;
+  padding-right: 8px;
+}
+
+.name-min {
+  width: 230px;
+}
+
+.max-width {
+  width: 99%;
+}
+
+.absence {
+  .name {
+    width: 229px;
+  }
+  .present {
+    width: 90px;
+  }
+  .absent {
+    width: 75px;
+  }
+  .excused {
+    width: 60px;
+  }
+  .note {
+    width: 210px;
+  }
+}
+
+.right {
+  text-align: right;
+}
+
+@duration: 76px;
+@box-space: 23px;
+
+#lesson-plans {
+  .space {
+    position: relative;
+    width: @box-space;
+    margin: 0;
+    top: -1px;
+    left: 0;
+    height: 100px;
+  }
+  .duration {
+    width: @duration;
+  }
+  .duration-big {
+    width: @duration;
+  }
+  .activity {
+    width: 537px;
+  }
+  .activity-edit {
+    width: 535px;
+  }
+  .done {
+    width: 68px;
+  }
+  .plan-name,
+  .plan-description {
+    width: 98%;
+  }
+}
+
+.date, .numeric {
+  text-align: right;
+  width: 100px;
+}
+
+.time {
+  text-align: center;
+}
+
+.slim {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+}

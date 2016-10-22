@@ -1,0 +1,41 @@
+<td></td>
+<td>
+    <span class="<%- getStatusClass(status) %>"></span>
+    <span>&nbsp;<%- getStatusClass(status) %></span>
+</td>
+<td>
+    <span class="visible-sm"><%- getShortDayName(start) %></span>
+    <span class="hidden-sm"><%- getDayName(start) %></span>
+</td>
+<td><%- getDay(start) %></td>
+<td><%- getTime(start)+ ' - ' + getTime(end) %></td>
+<td class="center">
+    <span><%- getDuration(start,end) %> </span>
+    <span>min</span>
+</td>
+<td class="text-center">
+    <div class="location-<%- locationID %>"></div>
+</td>
+<td class="text-center">
+    <div class="group-<%- groupID %>"></div>
+</td>
+<td class="text-center">
+    <div class="course id-<%- courseID %>"></div>
+</td>
+<td class="text-center"><% _.each( teachers, function(teacher){ %>
+    <div class="teacher-<%- teacher.personID %>"></div>
+    <% }); %>
+</td>
+<td class="text-right">
+    <form class="form-inline">
+        <button class="btn btn-default btn-sm open">Open</button>
+        <button class="btn btn-default btn-sm cancel">Cancel</button>
+        <button class="btn btn-default btn-sm reschedule">Reschedule</button>
+        <button class="btn btn-default btn-sm btn-danger delete">
+            <span class="glyphicon glyphicon-remove "></span>
+        </button>
+        <div class="checkbox">
+            <input class="is-selected" type="checkbox" <% if(isSelected==true){%> checked="checked"<% }%> >
+        </div>
+    </form>
+</td>

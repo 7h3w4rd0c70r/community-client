@@ -1,0 +1,41 @@
+<div class="modal-content">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        <h3 class="modal-title" id="myModalLabel">Lesson Paste</h3>
+    </div>
+    <div class="modal-body">
+        <form role="form">
+            <div class="checkbox">
+                <label>
+                    <input id="plan-header" name="plan-header" type="checkbox" checked="checked" value="1"/>
+                    Replace existing header
+                </label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input id="plan-all" name="plan" checked="checked" value="1" type="radio">
+                    Paste all activities
+                </label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input id="plan-not-done" name="plan" value="2" type="radio">
+                    Paste only activities not done
+                </label>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input id="empty-plan" name="empty-plan" type="checkbox" value="1"/>
+                    Clear existing activities before pasting.
+                </label>
+            </div>
+        </form>
+        <div class="buttons">
+            <button type="button" class="btn btn-default" data-dismiss="modal" id="do-paste">Paste</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        </div>
+    </div>
+</div>
+

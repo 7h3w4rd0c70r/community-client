@@ -1,0 +1,72 @@
+<td>
+    <select class="form-control day-of-week">
+        <option value="2">Monday</option>
+        <option value="3">Tuesday</option>
+        <option value="4">Wednesday</option>
+        <option value="5">Thursday</option>
+        <option value="6">Friday</option>
+        <option value="7">Saturday</option>
+        <option value="1">Sunday</option>
+    </select>
+</td>
+<td>
+    <div class="input-group time-picker">
+        <input type="text"
+               maxlength="5"
+               class="start-time form-control"
+               value="<%- getDefaultLessonTime()%>"
+               required="required"/>
+        <div class="input-group-addon">
+            <span class="glyphicon glyphicon-time"></span>
+        </div>
+    </div>
+</td>
+<td>
+    <div class="input-group duration-group">
+        <input type="number" class="form-control duration" value="<%- getDefaultLessonDuration()%>" min="1" max="2400">
+        <div class="input-group-addon">
+            <span>Minutes</span>
+        </div>
+    </div>
+</td>
+<td>
+    <div class="input-group">
+        <select class="form-control frequency">
+            <option value="0" selected="selected">Weekly</option>
+            <option value="1">Bi-weekly</option>
+        </select>
+    </div>
+</td>
+<td>
+    <div class="input-group date-picker">
+        <input type="text"
+               maxlength="10"
+               class="start-day form-control"
+               value="<%- getDefaultStartDate() %>"
+               required="required">
+        <div class="input-group-addon">
+            <span class="glyphicon glyphicon-calendar"></span>
+        </div>
+    </div>
+</td>
+<td>
+    <div class="input-group date-picker">
+        <input type="text"
+               maxlength="10"
+               class="end-day form-control"
+               value="<%- getDefaultEndDate() %>"
+               required="required">
+        <div class="input-group-addon">
+            <span class="glyphicon glyphicon-calendar"></span>
+        </div>
+    </div>
+</td>
+<td>
+    <div class="teacher full-with"></div>
+</td>
+<td>
+    <div class="location full-with"></div>
+</td>
+<td class="text-right">
+    <button class="btn btn-sm btn-danger"><span class="glyphicon glyphicon-remove"></span></button>
+</td>

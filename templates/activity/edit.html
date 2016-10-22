@@ -1,0 +1,180 @@
+<h2>Activity</h2>
+<div class="row">
+    <div class="col-sm-12 col-lg-9">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="form-group">
+                    <label for="title">Headline</label>
+                    <input class="form-control"
+                           maxlength="100"
+                           type="text"
+                           name="title"
+                           id="title"
+                           placeholder="What's the name of this activity"
+                           value="<%- title %>"
+                           required="required"
+                           autofocus="autofocus"
+                           autocomplete="on"
+                           data-toggle="tooltip"
+                           data-placement="top"
+                           title="What's the name of this activity?"
+                    />
+                </div>
+                <div class="form-group">
+                    <label for="instructions">Procedure</label>
+                    <div id="instructions" class="form-control"></div>
+                </div>
+                <div class="form-group">
+                    <label for="source">Source</label>
+                    <input class="form-control"
+                           maxlength="100"
+                           type="text"
+                           name="source"
+                           id="source"
+                           placeholder="What's the source of this activity"
+                           value="<% if(source){%><%- source %><%} else {%><%- getMyName()%><%}%>"
+                           required="required"
+                           autofocus="autofocus"
+                           autocomplete="on"
+                           data-toggle="tooltip"
+                           data-placement="top"
+                           title="What's the source of this activity?"
+                    />
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">Attachments</div>
+            <br/>
+            <div class="panel-body">
+                <div class="form-group">
+                    <div id="attachments"></div>
+                    <div id="attachment"
+                         data-toggle="tooltip"
+                         data-placement="top"
+                         title="Documents you need for this activity.">
+                    </div>
+                </div>
+            </div>
+            <div class="panel-footer">
+                <div class="row">
+                    <iframe class="col-xs-12" id="upload-frame" name="upload-frame"
+                            style="border: none; margin:0; padding: 0; height: 26px"
+                            onload="onActivityAttachmentUploadFinish(<%- activityID %>)"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-12 col-lg-3">
+        <div class="panel panel-default">
+            <div class="panel-heading">Skills</div>
+            <div class="panel-body">
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" id="writing" <% if(skills&1){%> checked="checked"<%}%>>
+                        <span class="clickable icon-small glyphicon <%- getSkill(1) %>"></span>
+                        - Writing
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" id="listening" <% if(skills&2){%> checked="checked"<%}%>>
+                        <span class="clickable icon-small glyphicon <%- getSkill(2) %>"></span>
+                        - Listening
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" id="reading" <% if(skills&4){%> checked="checked"<%}%>>
+                        <span class="clickable icon-small glyphicon <%- getSkill(4) %>"></span>
+                        - Reading
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" id="speaking" <% if(skills&8){%> checked="checked"<%}%>>
+                        <span class="clickable icon-small glyphicon <%- getSkill(8) %>"></span>
+                        - Speaking
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">Properties</div>
+            <div class="panel-body">
+                <div class="form-group">
+                    <label for="duration">Duration</label>
+                    <div class="input-group">
+                        <input class="form-control"
+                               type="number"
+                               name="duration"
+                               id="duration"
+                               min="0"
+                               step="5"
+                               value="<%- duration %>"
+                               required="required"
+                               data-toggle="tooltip"
+                               data-placement="top"
+                               title="How long should this activity take to complete?"
+                        />
+                        <div class="input-group-addon">Minutes</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="checkbox">
+                        <label data-toggle="tooltip" data-placement="top"
+                               title="Can you do this activity twice with same group?">
+                            <input type="checkbox"
+                                   name="isRepeatable"
+                                   id="isRepeatable"
+                                   autocomplete="on"
+                            <%- checked(isRepeatable) %> />
+                            Is repeatable
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="tags">Tags</label>
+                    <textarea id="tags"
+                              class="form-control"
+                              placeholder="grammar or teaching point, theme, level, type of activity, etc."
+                              data-toggle="tooltip"
+                              data-placement="top"
+                              title="What words or phrases will help you or the other teachers find this activity?"
+                    ><%-tags%></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="materials">Materials</label>
+                    <textarea
+                            id="materials"
+                            class="form-control"
+                            name="materials"
+                            placeholder=" worksheets, dice, cards, etc."
+                            data-toggle="tooltip"
+                            data-placement="top"
+                            title="What do you need to remember to bring to the lesson?"
+                    ><%- materials %></textarea>
+                </div>
+                <div class="data-item">
+                    <label for="preparation">Preparation</label>
+                    <textarea id="preparation"
+                              class="form-control"
+                              name="preparation"
+                              placeholder="a discussion theme, cutting up cards, etc."
+                              data-toggle="tooltip"
+                              data-placement="top"
+                              title="What do you need to prepare before the lesson?"
+                    ><%- preparation %></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-sm-12">
+    <div class="well">
+        <button class="btn btn-primary" id="back">Back</button>
+        <% if(activityID === null) { %>
+        <button class="btn btn-primary" id="save">Create</button>
+        <% }%>
+    </div>
+</div>

@@ -1,0 +1,24 @@
+<div class="row indent-half-top">
+    <div class="col-sm-1" style="max-width: 200px;">
+        <img src="<%- getAvatarUriByID(authorID) %>" alt="Profile picture" width="100%" class="img-thumbnail img-responsive"/>
+    </div>
+    <div class="col-sm-11">
+        <a href="#">
+            <%- authorName %>
+        </a>
+        <small>
+            <%- getDay(timeStamp) %> <%- getTime(timeStamp) %>
+        </small>
+        <div>
+            <%= content %>
+        </div>
+        <% if (String(authorID) == String(getMyAccountID())) { %>
+            <button type="button" class="btn btn-link lampa-link" id="removeComment">
+                <span class="glyphicon glyphicon-remove"></span>
+            </button>
+            <!--<button type="button" class="btn btn-link" id="editComment">
+                <span class="glyphicon glyphicon-edit"></span>
+            </button>-->
+        <% } %>
+    </div>
+</div>

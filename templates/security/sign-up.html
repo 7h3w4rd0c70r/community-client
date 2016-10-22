@@ -1,0 +1,78 @@
+<form role="form" class="form-horizontal">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-offset-2 col-sm-8 col-lg-offset-3 col-lg-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Sign Up</div>
+                    <div class="panel-body">
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="radio col-xs-offset-1 col-xs-10">
+                                    <label for="teacher">
+                                        <input type="radio" id="teacher" name="type" value="teacher" checked="checked">
+                                        I'm a teacher or language school and I would like to use LAMPA's tools
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="radio col-xs-offset-1 col-xs-10">
+                                    <label for="student">
+                                        <input type="radio" id="student" name="type" value="teacher">
+                                        I'm a student and I would like to subscribe
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row"><br/></div>
+                        <div class="row">
+                            <div class="form-group">
+                                <label class="col-sm-4" for="name">Full Name</label>
+                                <div class="col-sm-7">
+                                    <input id="name" value="<%- name %>" required="required"
+                                           class="form-control input-sm"/>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-4" for="email">Email</label>
+                                <div class="col-sm-7">
+                                    <input id="email" type="email" value="<%- email %>" required="required"
+                                           class="form-control input-sm"/>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-4" for="password">Password</label>
+                                <div class="col-sm-7">
+                                    <input id="password" type="password" value="<%- password %>" required="required"
+                                           class="form-control input-sm"/>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-4" for="repeated-pwd">Repeat Password</label>
+                                <div class="col-sm-7">
+                                    <input id="repeated-pwd" type="password" value="<%- repeatedPwd %>"
+                                           required="required"
+                                           class="form-control input-sm"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row"><br/></div>
+                        <div class="row">
+                            <input id="back" type="button"
+                                   class="col-xs-offset-1 col-xs-4 col-lg-offset-2 col-lg-3 btn btn-primary btn-md"
+                                   value="Back"/>
+                            <input id="sign" type="button"
+                                   class="col-xs-offset-2 col-xs-4 col-lg-offset-2 col-lg-3 btn btn-primary btn-md"
+                                   value="Sign Up"/>
+                        </div>
+                    </div>
+                </div>
+                <div id="errors" class="hidden row">
+                    <legend>Warnings</legend>
+                <span class="error <%- isPwdMatching()%>"
+                      id="pwd-not-mach">Password and Repeated Password not matching!</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</form>

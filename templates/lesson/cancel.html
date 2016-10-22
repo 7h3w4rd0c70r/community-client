@@ -1,0 +1,93 @@
+<h2 class="col-xs-12">Lesson Cancel</h2>
+<div class="col-xs-12 col-lg-9 row">
+    <div id="bar" class="col-xs-12">
+        <div class="box first-box col-xs-6 col-sm-2" id="status-time"></div>
+        <div class="box col-xs-6 col-sm-3">
+            <div class="panel panel-default">
+                <div class="panel-heading">Group</div>
+                <div id="group" class="panel-body"></div>
+            </div>
+        </div>
+        <div class="box col-xs-6 col-sm-2">
+            <div class="panel panel-default">
+                <div class="panel-heading">Location</div>
+                <div id="location" class="panel-body"></div>
+            </div>
+        </div>
+        <div class="box col-xs-6 col-sm-2">
+            <div class="panel panel-default">
+                <div class="panel-heading">Course</div>
+                <div id="course" class="panel-body"></div>
+            </div>
+        </div>
+        <div id="teachers"></div>
+    </div>
+</div>
+<div class="col-sm-12">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <form role="form" class="form-horizontal">
+                <div class="well">This Lesson Is <%- getStatusClassText(status,getUserRole(),getDateFromJSON(start)) %>.
+                    <% if(status === 102 && isAdmin()){%>
+                    <input id="do-un-postpone" class="btn btn-primary" type="button" value="Unpostpone"/>
+                    <% }%>
+                </div>
+                <br/>
+                <div class="form-group">
+                    <label class="control-label col-sm-3" for="cancel">Reason for canceling</label>
+                    <div class="col-sm-9">
+                        <input class="form-control" id="cancel" type="text" required="required"
+                               value="<%- cancel %>" size="100"/>
+                    </div>
+                </div>
+                <% if(status !== 3){%>
+                <div class="form-group">
+                    <label class="control-label col-sm-3" for="do-no-show"></label>
+                    <div class="col-sm-2">
+                        <input id="do-no-show" class="btn btn-primary" type="button" value="No-Show"/>
+                    </div>
+                    <div class="col-sm-7">
+                        <p class="form-control-static"><i>Lesson was paid, but no show.</i></p>
+                    </div>
+                </div>
+                <% }%>
+                <% if(status !== 100 && isAdmin()){%>
+                <div class="form-group">
+                    <label class="control-label col-sm-3" for="do-cancel"></label>
+                    <div class="col-sm-2">
+                        <input class="btn btn-primary" id="do-cancel" type="button" value="Cancel"/>
+                    </div>
+                    <div class="col-sm-7">
+                        <p class="form-control-static"><i>Lesson was canceled.</i></p>
+                    </div>
+                </div>
+                <% }%>
+                <% if(status !== 102 && isAdmin()){%>
+                <div class="form-group">
+                    <label class="control-label col-sm-3" for="do-postpone"></label>
+                    <div class="col-sm-2">
+                        <input class="btn btn-primary" id="do-postpone" type="button" value="To Postpone"/>
+                    </div>
+                    <div class="col-sm-7">
+                        <p class="form-control-static"><i>Lesson to be postponed.</i></p>
+                    </div>
+                </div>
+                <% }%>
+                <% if (isAdmin()){%>
+                <div class="form-group">
+                    <label class="control-label col-sm-3" for="do-delete"></label>
+                    <div class="col-sm-2">
+                        <input class="btn btn-danger" id="do-delete" type="button" value="Delete"/>
+                    </div>
+                    <div class="col-sm-7">
+                        <p class="form-control-static"><i>Lesson will be removed from the database!!</i></p>
+                    </div>
+                </div>
+                <%}%>
+            </form>
+        </div>
+        <div class="panel-footer">
+            <input class="btn btn-primary" type="button" id="back" value="Back">
+        </div>
+    </div>
+</div>

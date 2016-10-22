@@ -1,0 +1,28 @@
+<div class="container index">
+    <div class="row">
+        <div class="col-sm-2">
+            <img src="<%- getAvatarUriByID(accountID) %>" alt="Profile picture" width="100%" class="img-thumbnail img-responsive"/>
+        </div>
+        <div class="col-sm-7">
+            <h1>
+                <%- fullName %>
+            </h1>
+        </div>
+        <div class="col-sm-3">
+            <div class="btn-group">
+                <button type="button" class="btn btn-primary btn-lg" id="followBtn">Follow</button>
+                <button type="button" class="btn btn-default btn-lg" id="unfollowBtn">Unfollow</button>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-offset-2">
+            <h3>
+                Published asks
+            </h3>
+            <div class="row" id="asks">
+
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,131 @@
+@import "colors.less";
+@import "sizes.less";
+
+@space : 8px;
+@image-size: 157px;
+
+.opened {
+  h4 {
+    background-image: url("images/up.svg");
+    font-weight: bold;
+  }
+  ul {
+    visibility: visible;
+    display: block;
+  }
+}
+
+.closed {
+  h4 {
+    font-weight: normal;
+    background-image: url("images/down.svg");
+  }
+  ul {
+    visibility: hidden;
+    display: none;
+  }
+}
+
+.opened, .closed {
+  h4 {
+    background-size: 15px 15px;
+    background-repeat: no-repeat;
+    background-position: right 17px;
+  }
+}
+
+.sub-menu {
+
+  ul, li {
+    padding: 0;
+    margin: 0;
+  }
+
+  h4 {
+    font-size: 17px;
+    padding: 0;
+    margin: 0;
+    border: none;
+    cursor: pointer;
+    line-height: 48px;
+  }
+
+  .selected {
+    background-color: @item-selected;
+  }
+
+  border: 1px solid @borders;
+  padding: 5px;
+  margin: 0;
+}
+
+#side-menu {
+  position: absolute;
+  left: 0;
+  top: @header-height;
+  bottom: @footer-height;
+  width: @side-menu-width - 40px;
+  background: @item-background;
+  border: 1px solid @borders;
+  margin: @space;
+  padding: @space;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  a {
+    color: @lampa-red;
+    display: block;
+    padding-left: 5px;
+  }
+  a:hover {
+    color: #000000;
+  }
+
+  input[type='button'] {
+    display: block;
+    width: 100%;
+    height: 40px;
+  }
+
+}
+
+.scroll {
+  position: absolute;
+  width: 168px;
+  overflow-y: scroll;
+  top: @image-size + @space + @space;
+  bottom: @space;
+  background: transparent;
+}
+
+.top-label {
+  color: #000000;
+  padding-top: 8px;
+}
+
+#my-image {
+  border: 1px solid @borders;
+  max-width: @image-size;
+  max-height: @image-size;
+  background: transparent;
+}
+
+.user-full-name {
+  position: absolute;
+  color: white;
+  top: 130px;
+  left: 30px;
+}
+
+.mini-user {
+  width: 100px;
+  position: relative;
+  color: #000000;
+  font-size: 10px;
+
+  img {
+    width: 30px;
+    height: 30px;
+  }
+
+}

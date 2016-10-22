@@ -1,0 +1,51 @@
+<div class="row indent-half-top">
+    <div class="col-sm-1" style="max-width: 200px;">
+        <img src="<%- getAvatarUriByID(authorID) %>" alt="Profile picture" width="100%" class="img-thumbnail img-responsive"/>
+    </div>
+    <div class="col-sm-11">
+        <a href="#">
+            <%- authorName %>
+        </a>
+        <small>
+            <%- getDay(timeStamp) %> <%- getTime(timeStamp) %>
+        </small>
+        <div>
+            <%= content %>
+        </div>
+        <% if (String(authorID) == String(getMyAccountID())) { %>
+            <button type="button" class="btn btn-link lampa-link" id="removeAnswer">
+                <span class="glyphicon glyphicon-remove"></span>
+            </button>
+            <!--<button type="button" class="btn btn-link" id="editAnswer">
+                <span class="glyphicon glyphicon-edit"></span>
+            </button>-->
+        <% } %><button type="submit" id="commentBtn" class="btn btn-link lampa-link">Comment</button>
+        <button type="button" id="showComments" class="btn btn-link lampa-link">Show comments</button>
+        <br>
+        <div class="comments">
+
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div id="modalComment" class="col-sm-offset-1 col-sm-10 modal fade" role="dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Comment</h4>
+            </div>
+            <div class="modal-body">
+                <form role="form" class="form-horizontal">
+                    <div class="form-group">
+                        <div id="commentContent" class="form-control"></div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button id="saveComment" type="button" class="btn btn-primary" data-dismiss="modal">Comment</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

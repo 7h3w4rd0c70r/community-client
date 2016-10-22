@@ -1,0 +1,21 @@
+<td class="row">
+    <span><%- fullName %></span>
+</td>
+<td>
+    <span><%- isPresented(status) %></span>
+</td>
+<td class="right">
+    <% if(status> 1) { %>
+    <span><%- length %> min</span>
+    <% }%>
+</td>
+<td class="right">
+    <% if(status > 1) { %>
+    <span><%- isStudentExcused(absence) %></span>
+    <% }%>
+</td>
+<td>
+    <% if(status > 1) { %>
+    <span><%- note %></span>
+    <% }%>
+</td>

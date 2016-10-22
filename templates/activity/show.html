@@ -1,0 +1,112 @@
+<h2 class="col-xs-12">Activity </h2>
+<div class="col-sm-12 col-lg-9">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <h3 class="text-center"><%-title%></h3>
+            <div id="instructions" class="form-control-static"><%=instructions%></div>
+            <div class="text-right">Source:<strong><%- source %></strong></div>
+        </div>
+    </div>
+</div>
+<div class="col-sm-12 col-lg-3">
+    <div class="panel panel-default">
+        <div class="panel-heading">Skills</div>
+        <div class="panel-body">
+            <% if(skills&1) {%>
+            <div>
+                <span class="icon-big glyphicon <%- getSkill(1) %>"></span>
+                - Writing
+            </div>
+            <% } %>
+            <% if(skills&2) {%>
+            <div>
+                <span class="icon-big glyphicon <%- getSkill(2) %>"></span>
+                - Listening
+            </div>
+            <% } %>
+            <% if(skills&4) {%>
+            <div>
+                <span class="icon-big glyphicon <%- getSkill(4) %>"></span>
+                - Reading
+            </div>
+            <% } %>
+            <% if(skills&8) {%>
+            <div>
+                <span class="icon-big glyphicon <%- getSkill(8) %>"></span>
+                - Speaking
+            </div>
+            <% } %>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">Properties</div>
+        <div class="panel-body">
+            <div class="form-group">
+                <label for="duration">Duration</label>
+                <p id="duration" class="form-control-static"><%-duration%> Minutes</p>
+            </div>
+            <div class="form-group">
+                <div class="checkbox disabled">
+                    <label data-toggle="tooltip" data-placement="top"
+                           title="Can you do this activity twice with same group?">
+                        <input type="checkbox"
+                               id="isRepeatable"
+                               disabled="disabled"
+                        <%- checked(isRepeatable) %> />
+                        Is repeatable
+                    </label>
+                </div>
+            </div>
+
+            <% if(tags!='') { %>
+            <div class="form-group">
+                <label for="tags">Tags</label>
+                <p id="tags" class="form-control-static"><%-tags%></p>
+            </div>
+            <% } %>
+
+            <% if(materials!='') { %>
+            <div class="form-group">
+                <label for="materials">Materials</label>
+                <p id="materials" class="form-control-static"><%-materials%></p>
+            </div>
+            <% } %>
+
+            <% if(preparation!='') { %>
+            <div class="data-item">
+                <label for="preparation">Preparation</label>
+                <p id="preparation" class="form-control-static"><%-preparation%></p>
+            </div>
+            <% } %>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">Attachments</div>
+        <div class="panel-body">
+            <div class="form-group">
+                <div id="attachments"></div>
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-body" id="vote"></div>
+    </div>
+</div>
+<div class="col-sm-12">
+    <div class="well">
+        <button class="btn btn-primary" id="back">Back</button>
+        <% if(status!=1) { %>
+        <button class="btn btn-primary" id="delete">Delete</button>
+        <button class="btn btn-primary" id="edit">Edit</button>
+        <% } %>
+        <% if ((isPublic!=1 && status == 0) && createdBy==getMyAccountID()){
+       /* <button class="btn btn-primary" id="publish">Publish</button> */
+       } %>
+        <button class="btn btn-info" id="push" data-toggle="tooltip" title="Copy activity for use in lessons">
+            Select for Lesson <span class="badge"><%- getCountOfItemsInActivityClipboard() %></span>
+        </button>
+    </div>
+</div>
+
+
+

@@ -1,0 +1,52 @@
+@import "libs/bootstap/css/bootstrap.min.css";
+@import "colors";
+//@import "bootstap-template.less";
+
+h1, h2, h3, h4, h5, h6 {
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
+#logo {
+  left: 0;
+  font-size: 84px;
+  text-align: center;
+  width: 100%;
+  color: @lampa-red;
+}
+
+@media ( min-width: 768px) {
+  label {
+    padding-top: 6px;
+    text-align: right;
+  }
+
+  .radio {
+    label {
+      text-align: left;
+    }
+  }
+
+  .no-space {
+    padding-left: 0;
+  }
+}
+
+.panel-body {
+  margin: 4px;
+}
+
+#sign-in, #sign-up {
+  .panel {
+    min-height: 230px;
+  }
+  .panel-body {
+    input[type='button'] {
+      width: 130px;
+    }
+  }
+}

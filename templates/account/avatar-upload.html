@@ -1,0 +1,33 @@
+<form role="form"
+      id="attachment-upload"
+      enctype="multipart/form-data"
+      method="post"
+      action="<%- link %>"
+      target="upload-frame">
+    <div class="panel panel-default">
+        <div class="panel-heading">Avatar</div>
+        <div class="panel-body">
+            <div class="col-sm-4 form-group">
+                <img src="<%- getAvatarUri() %>"
+                     alt="Profile photo"
+                     class="avatar img-thumbnail img-responsive"
+                     height="100%"
+                     width="100%">
+            </div>
+            <div class="col-sm-6 form-group">
+                <div>
+                    <input id="attachment" name="attachment" type="file" accept="image/*;capture=camera">
+                    <input id="upload" name="upload" type="submit" class="btn btn-primary" value="Upload File"/>
+                </div>
+                <p>Please select and then click on upload file button.</p>
+                <p>Recommended image size is 150x150 pixels.</p>
+                <p>Maximum allowed file size is 3 Mb.</p>
+            </div>
+        </div>
+    </div>
+</form>
+<iframe id="response" name="upload-frame" onload="Lampa.trigger('avatar:load');"
+        style="width: 200px; height: 50px; display: none;"></iframe>
+
+
+

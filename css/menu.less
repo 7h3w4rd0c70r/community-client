@@ -1,0 +1,104 @@
+@item-width: 150px;
+
+@selected: darkgray;
+.navbar-inverse .navbar-nav > .open > a,
+.navbar-inverse .navbar-nav > .open > a:focus,
+.navbar-inverse .navbar-nav > .open > a:hover {
+  color: #fff;
+  background-color: @selected;
+}
+
+#header {
+  .navbar {
+    margin-bottom: 0;
+  }
+  .dropdown-menu {
+    min-width: @item-width + 1px;
+  }
+}
+
+@menu: white;
+
+#menu {
+  ul {
+    background-color: @menu;
+    z-index: unset;
+  }
+  .dropdown {
+    z-index: unset;
+  }
+  .dropdown-menu {
+    border: 1px solid @item-border;
+    float: left;
+    z-index: 10;
+    li {
+      z-index: 11;
+      position: relative;
+      width: 100%;
+      height: auto;
+      margin: 0;
+      a, a:hover {
+        font-size: 13px;
+        text-transform: uppercase;
+        margin: 0;
+        padding: 10px;
+      }
+
+      a:hover {
+        color: black;
+      }
+    }
+    li:hover {
+      width: 100%;
+      height: auto;
+      display: inline-block;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  li {
+    z-index: unset;
+    display: inline-block;
+    position: relative;
+    list-style-type: none;
+    text-align: left;
+    height: 50px;
+    margin-right: 1px;
+
+    a {
+      z-index: unset;
+      margin: 0;
+      padding: 5px;
+    }
+
+    div {
+      z-index: unset;
+      display: inline-block;
+      position: relative;
+      font-weight: bold;
+      font-size: 15px;
+      text-transform: uppercase;
+    }
+
+    .glyphicon {
+      z-index: unset;
+      font-size: 33px;
+    }
+
+    .caret {
+      z-index: unset;
+      top: -10px;
+    }
+  }
+
+  li:hover, .open {
+    z-index: unset;
+    color: black;
+    height: 50px;
+    display: inline-block;
+    margin: 0;
+    margin-right: 1px;
+    padding: 0;
+  }
+}

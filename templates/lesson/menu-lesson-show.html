@@ -1,0 +1,28 @@
+<div>Timetable View:</div>
+<% if (role==='admin') { %>
+<a href="#lesson/timetable-teacher">Weekly Teachers</a>
+<a href="#lesson/timetable-location">Weekly Locations</a>
+<a href="#lesson/timetable-group">Weekly Groups</a>
+<% }%>
+<a href="#lesson/grid">My Timetable</a>
+<hr/>
+<% if (role==='admin' || role==='teacher') { %>
+<div>Find Lessons</div>
+<div>Edit Lessons</div>
+<% if(itemId !== null){%>
+<a href="#lesson/edit/<%- itemId %>">Edit Lesson</a>
+<a href="#lesson/reschedule/<%- itemId %>">Reschedule Lesson</a>
+<a href="#lesson/cancel/<%- itemId %>">Cancel Lesson</a>
+<% }%>
+<% }%>
+<% if (role==='admin') { %>
+<a href="#lesson/add">Add Lessons</a>
+<div>Set Holidays/Non-teaching Days</div>
+<% }%>
+
+<% if(itemId !== null){%>
+<a href="#lesson/print/<%- itemId %>">Print Lesson</a>
+<input id="copy" type="button" value="Copy lesson"/>
+<% }%>
+
+

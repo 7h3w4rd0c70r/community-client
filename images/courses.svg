@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   x="0px"
+   y="0px"
+   width="512px"
+   height="512px"
+   viewBox="0 0 512 512"
+   enable-background="new 0 0 512 512"
+   xml:space="preserve"
+   id="svg4831"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="iconmonstr-user-13-icon.svg"><metadata
+   id="metadata4838"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
+   id="defs4836" /><sodipodi:namedview
+   pagecolor="#ffffff"
+   bordercolor="#666666"
+   borderopacity="1"
+   objecttolerance="10"
+   gridtolerance="10"
+   guidetolerance="10"
+   inkscape:pageopacity="0"
+   inkscape:pageshadow="2"
+   inkscape:window-width="1920"
+   inkscape:window-height="1018"
+   id="namedview4834"
+   showgrid="false"
+   inkscape:zoom="0.4609375"
+   inkscape:cx="256"
+   inkscape:cy="256"
+   inkscape:window-x="-8"
+   inkscape:window-y="-8"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="svg4831" />
+<path
+   id="user-13-icon"
+   d="M461.957,393.573H355.559c-0.005-115.799-57.887-60.76-57.887-162.232c0-36.629,23.98-56.51,54.772-56.51  c45.495,0,77.158,43.439,34.075,124.666c-14.153,26.684,15.072,33.025,46.469,40.268  C464.372,347.003,461.957,363.55,461.957,393.573z M289.119,325.89c-39.492-9.109-76.254-17.086-58.45-50.652  c54.192-102.17,14.364-156.811-42.862-156.811c-58.354,0-97.202,56.736-42.861,156.811c18.337,33.771-19.809,41.738-58.452,50.652  c-39.476,9.105-36.439,29.918-36.439,67.684h275.505C325.559,355.808,328.596,334.995,289.119,325.89z"
+   style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-opacity:1" />
+</svg>

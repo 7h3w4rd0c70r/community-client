@@ -1,0 +1,43 @@
+<h2 class="col-sm-12">Groups
+    <% if (isAdmin()){%>
+    <a href="#group/add" class="btn btn-primary btn-lg">Add</a>
+    <% }%>
+</h2>
+<div class="col-sm-12">
+    <form class="form-horizontal" role="form">
+        <div class="form-group">
+            <div class="well well-sm">
+                <div class="input-group">
+                    <input id="search-input"
+                           class="form-control"
+                           type="search"
+                           maxlength="255"
+                           placeholder="Type all or part of the group's name or abbreviation to search for the group"/>
+                    <div class="input-group-btn">
+                        <button id="search-btn" class="btn btn-primary" type="submit">
+                            <span class="glyphicon glyphicon-search"></span>
+                            Search
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<table class="col-sm-12 table numbered table-hover">
+    <thead>
+    <tr>
+        <th>#</th>
+        <th>Icon</th>
+        <th>Abbr</th>
+        <th>Name</th>
+        <th>Capacity</th>
+        <th>Students</th>
+        <th>Lessons</th>
+        <th>Start</th>
+        <th>End</th>
+        <th>Course</th>
+    </tr>
+    </thead>
+    <tbody></tbody>
+</table>

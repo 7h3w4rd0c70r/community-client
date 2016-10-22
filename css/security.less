@@ -1,0 +1,38 @@
+@import "font.less";
+
+@sign-in-box-width: 280px;
+@sign-up-box-width: 450px;
+@space: 30px;
+@edge: 50%;
+
+.box label {
+  width: auto;
+}
+
+#sign-in {
+  position: relative;
+  display: inline-block;
+  padding: @space;
+
+  .forgotten {
+    display: block;
+    width: @sign-in-box-width;
+    text-align: center;
+  }
+}
+
+#sign-up {
+  position: relative;
+  display: inline-block;
+  width: @sign-up-box-width;
+  padding: @space;
+}
+
+.welcome {
+  width: 100%;
+  text-align: center;
+}
+
+h2.welcome {
+  font-size: @font-size
+}

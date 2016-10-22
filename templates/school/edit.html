@@ -1,0 +1,108 @@
+<h2 class="col-xs-12">School</h2>
+<div class="col-xs-12">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <form role="form" class="form-horizontal">
+                <div class="form-group">
+                    <label class="control-label col-sm-3" for="name">School Name</label>
+                    <div class="col-sm-9">
+                        <input id="name"
+                               class="form-control"
+                               type="text"
+                               value="<%- name %>"
+                               required="required"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-3" for="abbr">Abbreviation</label>
+                    <div class="col-sm-2">
+                        <input id="abbr"
+                               class="form-control"
+                               type="text"
+                               size="4"
+                               maxlength="4"
+                               value="<%- abbr %>"
+                               required="required"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-3" for="email">Email</label>
+                    <div class="col-sm-9">
+                        <input id="email"
+                               class="form-control"
+                               type="email"
+                               size="100"
+                               maxlength="100"
+                               value="<%- email %>"/>
+                    </div>
+                </div>
+                <div class=" form-group">
+                    <label class="control-label col-sm-3" for="www">WWW</label>
+                    <div class="col-sm-9">
+                        <input id="www"
+                               class="form-control"
+                               type="url"
+                               size="255"
+                               maxlength="255"
+                               value="<%- www %>"
+                               placeholder="http://myschool.com"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-3" for="firstDate">School year starts on</label>
+                    <div class="col-sm-4 col-lg-3">
+                        <div class="input-group date-picker">
+                            <input id="firstDate"
+                                   class="form-control"
+                                   type="text"
+                                   value="<%- firstDate %>"
+                                   required="required"
+                                   size="10"
+                                   maxlength="10"
+                                   placeholder="first lesson date"/>
+                            <div class="input-group-addon">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-3" for="lastDate">School year ends on</label>
+                    <div class="col-sm-4 col-lg-3">
+                        <div class="input-group date-picker">
+                            <input id="lastDate"
+                                   class="form-control"
+                                   type="text"
+                                   value="<%- lastDate %>"
+                                   size="10"
+                                   maxlength="10"
+                                   placeholder="last lesson date"/>
+                            <div class="input-group-addon">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-3" for="lessonDuration">Lesson Duration</label>
+                    <div class="col-sm-3 col-lg-2">
+                        <div class="input-group ">
+                            <input id="lessonDuration"
+                                   class="form-control"
+                                   type="number"
+                                   min="1"
+                                   max="1440"
+                                   size="4"
+                                   maxlength="4"
+                                   value="<%- lessonDuration %>"
+                                   required="required"/>
+                            <div class="input-group-addon">
+                                <span>Minutes</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

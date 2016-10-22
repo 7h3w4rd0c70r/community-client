@@ -1,0 +1,11 @@
+<div class="panel-heading">
+    Date & Time
+</div>
+<div class="panel-body">
+    <div><%- getDay(start) %></div>
+    <div><%- getDayName(start)%></div>
+    <small><%- getTime(start) %> - <%- getTime(end)%></small>
+    <div>
+        <small><%- getDuration(start,end)%> minutes</small>
+    </div>
+</div>

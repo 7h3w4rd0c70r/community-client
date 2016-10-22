@@ -1,0 +1,29 @@
+<div class="panel panel-default">
+    <div class="panel-heading">Lessons</div>
+    <div class="panel-body">
+        <table class="table counted table-hover table-striped">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>Status</th>
+                <th>Day</th>
+                <th>Date</th>
+                <th>From</th>
+                <th>To</th>
+                <th>Duration</th>
+                <th>Group</th>
+                <th>Course</th>
+                <th>Teacher</th>
+            </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+    <% if (isAdmin()){%>
+    <div class="panel-footer">
+        <button id="add-lessons" class="btn btn-primary">Add Lessons</button>
+    </div>
+    <% } %>
+</div>
+
+

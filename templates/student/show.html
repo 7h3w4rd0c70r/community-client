@@ -1,0 +1,48 @@
+<h2 class="col-sm-12">Student</h2>
+<div class="col-sm-12">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <form role="form" class="form-horizontal">
+                <div class="form-group">
+                    <label for="fullName" class="control-label col-sm-2">Full Name</label>
+                    <div class="col-sm-10">
+                        <p id="fullName" class="form-control-static"><%- fullName %></p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email" class="control-label col-sm-2">Email</label>
+                    <div class="col-sm-10">
+                        <p id="email" class="form-control-static"><%- email %></p>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="panel-footer">
+            <input class="btn btn-primary" type="button" id="back" value="Back"/>
+            <% if (isAdmin()){%>
+            <input class="btn btn-primary edit" type="button" value="Edit"/>
+            <input class="btn btn-danger" type="button" id="delete" value="Delete"/>
+            <% } %>
+            <% if (!isUser) {%>
+            <button class="btn btn-primary" id="connect-button">Connect to School <span class="badge">150</span></button>
+            <button class="btn btn-default" id="invite-button">Invite</button>
+            <% } %>
+            <span id="invite-action"></span>
+        </div>
+    </div>
+</div>
+<div class="col-sm-12">
+    <div class="panel panel-default">
+        <div class="panel-heading">Groups</div>
+        <div class="panel-body">
+            <form id="groups" role="form" class="form-horizontal"></form>
+        </div>
+        <% if (isAdmin()){%>
+        <div class="panel-footer">
+            <input class="btn btn-primary edit" type="button" value="Edit"/>
+        </div>
+        <% } %>
+    </div>
+</div>
+<div id="lessons" class="col-sm-12"></div>
+<div id="invite-dialog" class="col-sm-12 modal fade" role="dialog"></div>

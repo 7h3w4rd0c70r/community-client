@@ -1,0 +1,49 @@
+@import "lampa-colors.less";
+@import "sizes.less";
+
+@color: gray;
+@top: 4px;
+@font-size: 13px;
+
+#header {
+  background-color: white;
+  z-index: 52;
+}
+
+.logout {
+  vertical-align: middle;
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: @color;
+  font-weight: 700;
+  font-size: 15px;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 28px;
+}
+
+body {
+  margin-top: 77px;
+}
+
+@media (max-width: 1150px) {
+  body {
+    margin-top: 127px;
+  }
+}
+
+@media (max-width: 767px) {
+  .navbar-fixed-top {
+    position: relative;
+    top: auto;
+  }
+
+  .navbar-collapse {
+    max-height: none;
+  }
+
+  body {
+    margin-top: 0;
+  }
+}

@@ -1,0 +1,39 @@
+Lesson
+<button id="cancel"
+        class="btn btn-default btn-lg"
+        data-toggle="tooltip"
+        title="Report Lesson no-show. <% if (isAdmin()){%>Postpone, Cancel or Delete or Cancel this Lesson<%}%>">
+    Cancel ...
+</button>
+<% if (isAdmin()){%>
+<button id="reschedule"
+        class="btn btn-default btn-lg"
+        data-toggle="tooltip"
+        title="Change Lesson Date, Time, Location, Group or Teachers">
+    Reschedule ...
+</button>
+<%}%>
+<% if(!isLessonInClipboard(lessonID)){%>
+<button id="copy"
+        type="button"
+        class="btn btn-default btn-lg"
+        data-toggle="tooltip"
+        title="Copy this Lesson Plan to clipboard">
+    Copy
+</button>
+<% } else {%>
+<button type="button"
+        id="paste"
+        class="btn btn-default btn-lg"
+        data-toggle="modal" data-target="#paste-lesson-modal"
+        title="Paste Copy of Lesson Plan from clipboard">
+    Paste ...
+</button>
+<% }%>
+<button id="print-lesson"
+        type="button"
+        class="btn btn-default btn-lg"
+        data-toggle="tooltip"
+        title="Open Lesson Plan in printable format">
+    Print ...
+</button>

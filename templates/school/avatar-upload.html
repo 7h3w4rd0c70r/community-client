@@ -1,0 +1,17 @@
+<h2>My Image</h2>
+
+<form id="attachment-upload"
+      enctype="multipart/form-data"
+      method="post"
+      action="<%- link %>"
+      target="upload-frame">
+    <input id="attachment" name="attachment" type="file" accept="image/*;capture=camera">
+    <input type="submit" value="Upload File"/>
+    <p>Please select and than click on upload file button.</p>
+    <p>Recommended image size is 150x150 pixels.</p>
+    <p>Maximum allowed file size is 3 Mb.</p>
+</form>
+
+<iframe id="response" name="upload-frame" onload="onAvatarUploadFinish(this);"
+        style="width: 200px; height: 50px; display: none;"></iframe>
+

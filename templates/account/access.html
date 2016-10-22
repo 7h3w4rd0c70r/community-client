@@ -1,0 +1,7 @@
+<div class="radio <%- checked(inUse)%>">
+    <label>
+        <input type="radio" name="active" <%- checked(inUse)%> value="<%- inUse%>" />
+        <% if(type=='a'){%>Admin<%}%><% if(type=='t'){%>Teacher<%}%><% if(type=='s'){%>Student<%}%><%
+        if(type=='p'){%>Sponsor<%}%> - <%- schoolName %>
+    </label>
+</div>

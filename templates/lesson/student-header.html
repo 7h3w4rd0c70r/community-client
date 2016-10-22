@@ -1,0 +1,22 @@
+<div class="form-group">
+    <label class="control-label col-sm-1" for="name"><%- labelName() %></label>
+    <div class="col-sm-11">
+        <p id="name" class="form-control-static"><%- name %></p>
+    </div>
+</div>
+<% if (description_a && description_a.trim() !== '') {%>
+<div class="form-group">
+    <label class="control-label col-sm-1 " for="description_a"><%- labelDescriptionA() %></label>
+    <div class="col-sm-11">
+        <p id="description_a" class="form-control-static"><%- description_a %></p>
+    </div>
+</div>
+<% } %>
+<% if (description_b && description_b !== '') {%>
+<div class="form-group">
+    <label class="control-label col-sm-1 " for="description_b"><%- labelDescriptionB() %></label>
+    <div class="col-sm-11">
+        <p id="description_b" class="form-control-static"><%- description_b %></p>
+    </div>
+</div>
+<% } %>

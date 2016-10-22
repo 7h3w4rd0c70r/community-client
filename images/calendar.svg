@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   x="0px"
+   y="0px"
+   width="512px"
+   height="512px"
+   viewBox="0 0 512 512"
+   enable-background="new 0 0 512 512"
+   xml:space="preserve"
+   id="svg3779"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="iconmonstr-calendar-5-icon.svg"><metadata
+   id="metadata3786"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
+   id="defs3784" /><sodipodi:namedview
+   pagecolor="#ffffff"
+   bordercolor="#666666"
+   borderopacity="1"
+   objecttolerance="10"
+   gridtolerance="10"
+   guidetolerance="10"
+   inkscape:pageopacity="0"
+   inkscape:pageshadow="2"
+   inkscape:window-width="1920"
+   inkscape:window-height="1018"
+   id="namedview3782"
+   showgrid="false"
+   inkscape:zoom="0.4609375"
+   inkscape:cx="-122.57627"
+   inkscape:cy="256"
+   inkscape:window-x="-8"
+   inkscape:window-y="-8"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="svg3779" />
+<path
+   id="calendar-5-icon"
+   d="M197.453,295.951h-58.905v-58.904h58.905V295.951z M286.452,237.047h-58.904v58.904h58.904V237.047z   M375.452,237.047h-58.905v58.904h58.905V237.047z M197.453,323.047h-58.905v58.906h58.905V323.047z M286.452,323.047h-58.904  v58.906h58.904V323.047z M375.451,323.047h-58.904v58.906h58.904V323.047z M397.389,118.131c0,10.035-8.135,18.171-18.17,18.171  s-18.171-8.136-18.171-18.171V72.402c0-10.034,8.136-18.17,18.171-18.17s18.17,8.136,18.17,18.17V118.131z M151.889,72.32  c0-10.035-8.136-18.171-18.17-18.171c-10.036,0-18.171,8.136-18.171,18.171v45.728c0,10.035,8.135,18.171,18.171,18.171  c10.034,0,18.17-8.136,18.17-18.171V72.32z M419.352,98.851v18.616c0,22.13-18.004,40.134-40.133,40.134  c-22.13,0-40.134-18.004-40.134-40.134V98.851H173.852v18.533c0,22.13-18.004,40.134-40.133,40.134  c-22.13,0-40.134-18.004-40.134-40.134V98.851H50v359h412v-359H419.352z M422,417.851H90V195.38h332V417.851z"
+   style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-opacity:1" />
+</svg>

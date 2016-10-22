@@ -1,0 +1,35 @@
+<h4 class="opened">Lesson</h4>
+<ul class="nav nav-pills nav-stacked">
+    <% if (role==='admin') { %>
+    <li id="show-add-lessons" role="presentation" class="<%- isActive(selected,'show-add-lessons') %>">
+        <a href="#">Add</a>
+    </li>
+    <% }%>
+    <% if (role==='admin' || role==='teacher') { %>
+    <li id="show-find-lessons" role="presentation" class="<%- isActive(selected,'show-find-lessons') %>">
+        <a href="#">Find</a>
+    </li>
+    <% }%>
+</ul>
+<h4 class="opened">Timetables</h4>
+<ul class="nav nav-pills nav-stacked">
+    <li id="show-dashboard" role="presentation" class="<%- isActive(selected,'show-dashboard')%>">
+        <a href="#lesson/timetable">Dashboard</a>
+    </li>
+    <li id="show-my-timetable" role="presentation" class="<%- isActive(selected,'show-my-timetable')%>">
+        <a href="#lesson/grid?teacher=myself">My Running Timetable</a>
+    </li>
+    <% if (role==='admin') { %>
+    <li id="show-teacher-timetable" role="presentation" class="<%- isActive(selected,'show-teacher-timetable')%>">
+        <a href="#lesson/timetable-teacher">Teachers Running Timetable</a>
+    </li>
+    <li id="show-location-timetable" role="presentation" class="<%- isActive(selected,'show-location-timetable')%>">
+        <a href="#lesson/timetable-location">Locations Running Timetable</a>
+    </li>
+    <li id="show-group-timetable" role="presentation" class="<%- isActive(selected,'show-group-timetable')%>">
+        <a href="#lesson/timetable-group">Groups Running Timetable</a>
+    </li>
+    <% }%>
+</ul>
+
+

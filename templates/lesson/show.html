@@ -1,0 +1,95 @@
+<div class="col-sm-12">
+    <div id="buttons"></div>
+</div>
+<div class="col-xs-12 col-lg-9 row">
+    <div id="bar" class="col-xs-12">
+        <div class="box first-box col-xs-6 col-sm-2" id="status-time"></div>
+        <div class="box col-xs-6 col-sm-3">
+            <div class="panel panel-default">
+                <div class="panel-heading">Group</div>
+                <div id="group" class="panel-body"></div>
+            </div>
+        </div>
+        <div class="box col-xs-6 col-sm-2">
+            <div class="panel panel-default">
+                <div class="panel-heading">Location</div>
+                <div id="location" class="panel-body"></div>
+            </div>
+        </div>
+        <div class="box col-xs-6 col-sm-2">
+            <div class="panel panel-default">
+                <div class="panel-heading">Course</div>
+                <div id="course" class="panel-body"></div>
+            </div>
+        </div>
+        <div id="teachers"></div>
+    </div>
+    <div class="col-xs-12">
+        <form id="lesson" role="form" class="form-horizontal">
+            <div class="panel panel-default">
+                <div id="header" class="panel-body"></div>
+            </div>
+        </form>
+    </div>
+    <% if(status == 1) {%>
+    <div class="col-xs-12">
+        <div class="panel panel-default ">
+            <div class="panel-heading">Activities</div>
+            <div class="panel-body">
+                <div id="plans"></div>
+            </div>
+            <div class="panel-footer">
+                <div class="row">
+                    <div id="plan-statistics" class="col-xs-6 text-right"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <% } else {%>
+    <div id="plan-statistics"></div>
+    <% } %>
+    <div class="col-xs-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">Attendance</div>
+            <div id="lesson-attendance" class="panel-body table-responsive"></div>
+        </div>
+    </div>
+    <div class="col-xs-12">
+        <div class="panel panel-default hide">
+            <div class="panel-heading">Last Lesson</div>
+            <div id="last-lesson-detail"></div>
+        </div>
+    </div>
+    <div class="col-xs-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">Homework</div>
+            <div class="panel-body">
+                <div id="homework-area"></div>
+                <div id="new-homework"></div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">Vocabulary</div>
+            <div class="panel-body" id="lesson-dictionary"></div>
+            <div class="panel-footer" id="dictionary-add-item"></div>
+        </div>
+    </div>
+</div>
+<div class="col-xs-12 col-sm-3 row">
+    <div class="col-xs-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">Last Lesson Activities</div>
+            <div class="panel-body">
+                <div id="last-plan-detail"></div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">Group Vocabulary</div>
+            <div class="panel-body" id="group-dictionary"></div>
+        </div>
+    </div>
+</div>

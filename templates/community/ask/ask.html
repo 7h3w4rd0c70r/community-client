@@ -1,0 +1,80 @@
+<div class="row indent-top">
+    <div class="col-sm-1" style="max-width: 200px;">
+        <img src="<%- getAvatarUriByID(authorID) %>" alt="Profile picture" width="100%" class="img-thumbnail img-responsive"/>
+        <% if (String(authorID) == String(getMyAccountID())) { %>
+        <hr>
+        <button type="button" class="btn btn-link btn-sm lampa-link" id="removeAsk" data-toggle="tooltip" data-placement="top" title="Delete this question">
+            <span class="glyphicon glyphicon-remove"></span>
+        </button>
+        <button type="button" class="btn btn-link btn-sm" id="editAsk" data-toggle="tooltip" data-placement="top" title="Edit this question">
+            <span class="glyphicon glyphicon-edit"></span>
+        </button>
+        <% } %>
+    </div>
+    <div class="col-sm-11">
+        <span class="btn btn-link author">
+            <%- authorName %>
+        </span>
+        <small>
+            <%- getDay(timeStamp) %> <%- getTime(timeStamp) %>
+        </small>
+        <h4>
+            <%- question %>
+        </h4>
+        <div>
+            <div class="content">
+                <%= content %>
+            </div>
+        </div>
+        <a class="toggleShow">Show more</a>
+        <button type="button" id="answerBtn" class="btn btn-link lampa-link">Answer this question</button>
+        <br>
+        <div class="answers">
+
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div id="modalAnswer" class="col-sm-offset-1 col-sm-10 modal fade" role="dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Answer</h4>
+            </div>
+            <div class="modal-body">
+                <form role="form" class="form-horizontal">
+                    <div class="form-group">
+                        <div id="answerContent" class="form-control"></div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button id="saveAnswer" type="button" class="btn btn-primary" data-dismiss="modal">Answer</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div id="modalEdit" class="col-sm-offset-1 col-sm-10 modal fade" role="dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            </div>
+            <div class="modal-body">
+                <form role="form" class="form-horizontal">
+                    <div class="form-group" style="padding: 0px 20px 0px 20px;">
+                        <input type="text" class="form-control input-lg" id="askEditQuestion" placeholder="Write your question here... (required)" value="<%- question %>">
+                        <div id="askEditContent" class="form-control" placeholder="Write details about your question here, if you want. (not required)"></div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button id="saveEditedAsk" type="button" class="btn btn-primary" data-dismiss="modal">Ask LAMPA</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,38 @@
+<div class="form-group">
+    <label class="control-label col-sm-3 col-lg-2" for="name"><%- labelName() %></label>
+    <div class="col-sm-2">
+        <p id="name" class="form-control-static"><%- name %></p>
+    </div>
+</div>
+<% if (description_a && description_a.trim() !== '') {%>
+<div class="form-group">
+    <label class="control-label col-sm-3 col-lg-2" for="description_a"><%- labelDescriptionA() %></label>
+    <div class="col-sm-2">
+        <p id="description_a" class="form-control-static"><%- description_a %></p>
+    </div>
+</div>
+<% } %>
+<% if (description_b && description_b !== '') {%>
+<div class="form-group">
+    <label class="control-label col-sm-3 col-lg-2" for="description_b"><%- labelDescriptionB() %></label>
+    <div class="col-sm-2">
+        <p id="description_b" class="form-control-static"><%- description_b %></p>
+    </div>
+</div>
+<% } %>
+<% if (materials && materials !== '') {%>
+<div class="form-group">
+    <label class="control-label col-sm-3 col-lg-2" for="materials">Materials</label>
+    <div class="col-sm-2">
+        <p id="materials" class="form-control-static"><%- materials %></p>
+    </div>
+</div>
+<% } %>
+<% if (notes && notes !== '') {%>
+<div class="form-group">
+    <label class="control-label col-sm-3 col-lg-2" for="notes">Notes</label>
+    <div class="col-sm-2">
+        <p id="notes" class="form-control-static"><%- notes %></p>
+    </div>
+</div>
+<% } %>

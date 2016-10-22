@@ -1,0 +1,90 @@
+@import "colors.less";
+.teacher-icon-list {
+  display: inline-block;
+}
+
+.teacher {
+  display: inline-block;
+}
+
+.teachers, .teachers-small {
+  display: inline-block;
+  text-decoration: none;
+  background-repeat: no-repeat;
+  background: url("images/user.svg"), none;
+  background-size: 100% 100%;
+  border: none;
+  vertical-align: middle;
+}
+
+
+.teachers {
+  width: 50px;
+  height: 50px;
+}
+
+.teachers-small {
+  width: 25px;
+  height: 25px;
+  margin: 2px;
+}
+
+.teacher-cell {
+  position: relative;
+  text-align: center;
+  padding-top: 4px;
+  .teacher-small {
+    position: relative;
+    top: 2px;
+  }
+}
+
+li{
+  .teachers-small{
+    left: 2px;
+    top: 6px;
+    position: relative;
+  }
+}
+
+#teacher {
+  ul{
+    position: relative;
+    display: block;
+    li {
+      line-height: 18px;
+      display: inline-block;
+      margin: 2px;
+      width:200px;
+      height: 30px;
+      border: 1px solid @borders;
+      background-color: @item-background;
+      input[type="checkbox"]{
+        top:0;
+        left: 8px;
+        vertical-align: middle;
+      }
+      span{
+        vertical-align:bottom;
+        margin:0 ;
+      }
+    }
+  }
+}
+
+.item-selected {
+  width: 100%;
+  height: 100%;
+  background-color: @item-selected;
+}
+
+.teacher-1,.teacher-small-1{  background-image: url("images/user/000000F0.svg"); }
+.teacher-2,.teacher-small-2{  background-image: url("images/user/808080F0.svg"); }
+.teacher-3,.teacher-small-3{  background-image: url("images/user/FF0000F0.svg"); }
+.teacher-4,.teacher-small-4{  background-image: url("images/user/00FF00F0.svg"); }
+.teacher-5,.teacher-small-5{  background-image: url("images/user/0000F0F0.svg"); }
+.teacher-6,.teacher-small-6{  background-image: url("images/user/FFFF00F0.svg"); }
+.teacher-7,.teacher-small-7{  background-image: url("images/user/00FFFFF0.svg"); }
+.teacher-8,.teacher-small-8{  background-image: url("images/user/FF00FFF0.svg"); }
+
+

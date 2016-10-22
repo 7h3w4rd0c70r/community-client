@@ -1,0 +1,24 @@
+<div class="col-xs-12">
+    <form role="form"
+          id="upload"
+          enctype="multipart/form-data"
+          method="post"
+          class="form"
+          action="<%- link %>"
+          target="upload-frame">
+
+        <div class="form-group">
+            <div class="input-group col-sm-12">
+                <div class="input-group-addon " id="sizing-addon1">
+                    <span class="glyphicon glyphicon-paperclip"></span>
+                </div>
+                <input id="new-attachment" name="new-attachment" class="form-control" type="file"
+                       accept="image/*;capture=camera">
+
+                <div class="input-group-btn text-left">
+                    <input type="submit" class="btn btn-primary" value="Upload"/>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

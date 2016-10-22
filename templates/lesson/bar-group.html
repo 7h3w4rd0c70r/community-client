@@ -1,0 +1,18 @@
+<div>
+    <% if(lastLessonID!=null){ %>
+    <a href="#lesson/<%- lastLessonID %>" title="<%- name %>'s Previous Lesson">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+    <%} %>
+    <span class="groups group-<%- icon %> clickable"></span>
+    <% if(nextLessonID!=null){ %>
+    <a href="#lesson/<%- nextLessonID %>" title="<%- name %>'s Next Lesson">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+    <%} %>
+</div>
+<div class="clickable"><%- abbr %></div>
+<div class="clickable">
+    <small><%- name %></small>
+</div>
+

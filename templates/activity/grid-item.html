@@ -1,0 +1,13 @@
+<div class="activity-envelop">
+    <div class="title"><%- title %></div>
+    <div class="icons">
+        <% if(skills&1) {%><span class="glyphicon <%- getSkill(1) %>"></span><% } %>
+        <% if(skills&2) {%><span class="glyphicon <%- getSkill(2) %>"></span><% } %>
+        <% if(skills&4) {%><span class="glyphicon <%- getSkill(4) %>"></span><% } %>
+        <% if(skills&8) {%><span class="glyphicon <%- getSkill(8) %>"></span><% } %>
+    </div>
+    <% if(voted == 1) { %>
+    <div class="vote"></div>
+    <% } %>
+    <div class="votes"><%- votes %> Votes</div>
+</div>

@@ -1,0 +1,36 @@
+<div class="container index">
+    <form class="form-group" id="search">
+        <div class="input-group">
+            <span class="input-group-btn" id="cancelSearch">
+                <button class="btn btn-danger" type="button" id="cancelSearchBtn">Cancel search</button>
+            </span>
+            <input type="text" class="form-control required" id="terms" placeholder="Write a name you're looking for here">
+            <span class="input-group-btn">
+                <button class="btn btn-default" type="submit">Find a profile</button>
+            </span>
+        </div>
+    </form>
+    <hr>
+    <h2>
+        <div class="col-sm-2" style="float: right;">
+            <select id="direction" class="form-control">
+                <option value="all">Show all</option>
+                <option value="following" selected>I'm following</option>
+                <option value="followed">Following me</option>
+            </select>
+        </div>
+        Browse profiles<br/>
+    </h2>
+
+    <br/>
+
+    <div id="profiles" style="margin-bottom: 100px;">
+
+    </div>
+    <div>
+        <button class="btn btn-default changePage" data-goto="previous">Previous page</button>
+        You're on page: <span id="page"></span>
+        <button class="btn btn-default changePage" data-goto="next">Next page</button>
+    </div>
+
+</div>

@@ -1,0 +1,85 @@
+<h2 class="col-lg-12"><% if( locationID === null) { %> New <% } %> Location</h2>
+<div class="col-lg-12">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <form role="form" class="form-horizontal">
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="abbr">Abbreviation</label>
+                    <div class="col-sm-2">
+                        <input class="form-control" id="abbr" name="abbr" type="text" value="<%- abbr %>" size="4"
+                               maxlength="4"
+                               required="required"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="name">Name</label>
+                    <div class="col-sm-9 col-lg-10">
+                        <input class="form-control" id="name" name="name" type="text" value="<%- name %>" size="100"
+                               maxlength="100"
+                               required="required"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="capacity">Capacity</label>
+                    <div class="col-sm-2">
+                        <input class="form-control" id="capacity" name="capacity" type="number"
+                               value="<%- capacity %>"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="start">Start</label>
+                    <div class="col-sm-4 col-lg-3">
+                        <div class="input-group date-picker">
+                            <input type="text" id="start" maxlength="10" class="form-control"
+                                   value="<% if(locationID === null) {%><%- getDefaultStartDate()%><%} else{ %><%- getDatePart(start) %><%}%>"
+                                   required="required">
+                            <div class="input-group-addon">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="end">End</label>
+                    <div class="col-sm-4 col-lg-3">
+                        <div class="input-group date-picker">
+                            <input id="end" type="text" maxlength="10" class="form-control"
+                                   value="<% if(locationID === null) {%><%- getDefaultEndDate()%><%} else{ %><%- getDatePart(end) %><%}%>">
+                            <div class="input-group-addon">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-2">Icon</label>
+                    <div class="col-sm-9 col-lg-10">
+                        <span class="item-icon glyphicon glyphicon-map-marker index-<%- icon %>"></span>
+
+                        <div class="item-icon-sm glyphicon glyphicon-map-marker index-1 clickable" data-value="1"></div>
+                        <div class="item-icon-sm glyphicon glyphicon-map-marker index-2 clickable" data-value="2"></div>
+                        <div class="item-icon-sm glyphicon glyphicon-map-marker index-3 clickable" data-value="3"></div>
+                        <div class="item-icon-sm glyphicon glyphicon-map-marker index-4 clickable" data-value="4"></div>
+                        <div class="item-icon-sm glyphicon glyphicon-map-marker index-5 clickable" data-value="5"></div>
+                        <div class="item-icon-sm glyphicon glyphicon-map-marker index-6 clickable" data-value="6"></div>
+                        <div class="item-icon-sm glyphicon glyphicon-map-marker index-7 clickable" data-value="7"></div>
+                        <div class="item-icon-sm glyphicon glyphicon-map-marker index-8 clickable" data-value="8"></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="description">Description</label>
+                    <div class="col-sm-9 col-lg-10">
+                        <textarea class="form-control" id="description" name="description"><%- description %></textarea>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="panel-footer">
+            <input class="btn btn-primary" type="button" id="back" value="Back"/>
+            <% if( locationID === null) { %>
+            <input class="btn btn-primary" type="button" id="save" value="Create"/>
+            <% } %>
+        </div>
+    </div>
+</div>
+<div id="lessons" class="col-sm-12"></div>

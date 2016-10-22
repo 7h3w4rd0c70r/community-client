@@ -1,0 +1,62 @@
+<h2 class="col-lg-12">
+    <% if( locationID === null) { %> New <% } %>
+    Location
+</h2>
+<div class="col-lg-12">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <form role="form" class="form-horizontal">
+                <div class="form-group">
+                    <label class="control-label col-sm-3 col-lg-2" for="abbr">Abbreviation</label>
+                    <div class="col-sm-2">
+                        <p id="abbr" class="form-control-static"><%- abbr %></p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-3 col-lg-2" for="name">Name</label>
+                    <div class="col-sm-9 col-lg-10">
+                        <p id="name" class="form-control-static"><%- name %></p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-3 col-lg-2" for="capacity">Capacity</label>
+                    <div class="col-sm-4 col-lg-3">
+                        <p id="capacity" class="form-control-static"><%- capacity %></p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-3 col-lg-2" for="start">Start</label>
+                    <div class="col-sm-4 col-lg-3">
+                        <p id="start" class="form-control-static"><%- getDate(start)%></p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-3 col-lg-2" for="end">End</label>
+                    <div class="col-sm-4 col-lg-3">
+                        <p id="end" class="form-control-static"><%- getDate(end)%></p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-3 col-lg-2">Icon</label>
+                    <div class="col-sm-9 col-lg-10">
+                        <div class="item-icon glyphicon glyphicon-map-marker index-<%- icon %>"></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-3 col-lg-2" for="description">Description</label>
+                    <div class="col-sm-9 col-lg-10">
+                        <p id="description" class="form-control-static"><%- description %></p>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="panel-footer">
+            <input class="btn btn-primary" type="button" id="back" value="Back"/>
+            <% if (isAdmin()){%>
+            <input class="btn btn-primary" type="button" id="edit" value="Edit"/>
+            <input class="btn btn-danger" type="button" id="delete" value="Delete"/>
+            <% } %>
+        </div>
+    </div>
+</div>
+<div id="lessons" class="col-sm-12"></div>

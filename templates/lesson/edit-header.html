@@ -1,0 +1,33 @@
+<div class="form-group">
+    <label class="control-label col-sm-2" for="name"><%- labelName() %></label>
+    <div class="col-sm-10">
+        <input class="form-control input-sm" id="name" type="text" value="<%- name %>" maxlength="90"
+               required="required"/>
+    </div>
+</div>
+<div class="form-group">
+    <label class="control-label col-sm-2" for="description_a"><%- labelDescriptionA() %></label>
+    <div class="col-sm-10">
+        <input class="form-control input-sm" id="description_a" type="text" value="<%- description_a %>"
+               maxlength="90"/>
+    </div>
+</div>
+<div class="form-group">
+    <label class="control-label col-sm-2" for="description_b"><%- labelDescriptionB() %></label>
+    <div class="col-sm-10">
+        <input class="form-control input-sm" id="description_b" type="text" value="<%- description_b %>"
+               maxlength="90"/>
+    </div>
+</div>
+<div class="form-group">
+    <label class="control-label col-sm-2" for="materials">Materials</label>
+    <div class="col-sm-10">
+        <textarea id="materials" cols="90" rows="3" class="form-control input-sm"><%- materials %></textarea>
+    </div>
+</div>
+<div class="form-group">
+    <label class="control-label col-sm-2" for="notes">Notes</label>
+    <div class="col-sm-10">
+        <textarea id="notes" cols="90" rows="3" class="form-control input-sm"><%- notes %></textarea>
+    </div>
+</div>

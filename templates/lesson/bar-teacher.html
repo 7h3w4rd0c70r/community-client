@@ -1,0 +1,22 @@
+<div class="panel panel-default">
+    <div class="panel-heading">Teacher</div>
+    <div class="panel-body">
+        <div>
+            <% if(lastLessonID!=null){ %>
+            <a href="#lesson/<%- lastLessonID %>" title="<%- fullName %>'s Previous Lesson">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+            <%} %>
+            <span class="teachers teacher-<%- icon %> clickable"></span>
+            <% if(nextLessonID!=null){ %>
+            <a href="#lesson/<%- nextLessonID %>" title="<%- fullName %>'s Next Lesson">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
+            <%} %>
+        </div>
+        <div class="clickable"><%- abbr %></divclass>
+        <div class="clickable">
+            <small><%- fullName %></small>
+        </div>
+    </div>
+</div>

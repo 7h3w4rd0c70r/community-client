@@ -1,0 +1,16 @@
+<div class="avatar" style="<%- getLogoOnBackground()%>"></div>
+<hr/>
+<div>Timetable View:</div>
+<% if (role==='admin') { %>
+<a href="#lesson/timetable-teacher">Weekly Teachers</a>
+<a href="#lesson/timetable-location">Weekly Locations</a>
+<a href="#lesson/timetable-group">Weekly Groups</a>
+<% }%>
+<a href="#lesson/grid">My Timetable</a>
+<hr/>
+<% if (role==='admin' || role==='teacher') { %>
+<div>Find Lessons</div>
+<% }%>
+<% if (role==='admin') { %>
+<div>Set Holidays/Non-teaching Days</div>
+<% }%>

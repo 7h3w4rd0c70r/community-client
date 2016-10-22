@@ -1,0 +1,29 @@
+<form role="form" class="form-horizontal">
+    <div class="form-group">
+        <label for="groupID" class="control-label col-sm-1">Group</label>
+        <div class="input-group col-sm-6">
+            <select id="groupID" class="form-control input-sm" required="required"></select>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="from" class="control-label col-sm-1">Begin</label>
+        <div class="input-group date-picker col-sm-2">
+            <input id="from" type="text" maxlength="10" class="form-control input-sm"
+                   value="<%- getDefaultStartDate() %>">
+            <div class="input-group-addon">
+                <span class="glyphicon glyphicon-calendar"></span>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="from" class="control-label col-sm-1">End</label>
+        <div class="input-group date-picker col-sm-2">
+            <input id="to" type="text" maxlength="10" class="form-control input-sm"
+                   value="<%- getDefaultEndDate()%>">
+            <div class="input-group-addon">
+                <span class="glyphicon glyphicon-calendar"></span>
+            </div>
+        </div>
+    </div>
+</form>
+<button class="btn btn-primary" id="add">Add to Group</button>

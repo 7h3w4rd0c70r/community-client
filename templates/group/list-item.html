@@ -1,0 +1,12 @@
+<td class="number"></td>
+<td>
+    <div class="groups-small group-<%- icon%>"></div>
+</td>
+<td><%- abbr %></td>
+<td><%- name %></td>
+<td class="number"><span <% if (capacity < students){%>class="text-warning"<%}%>><%- capacity %></span></td>
+<td class="number"><span><%- students %></span></td>
+<td class="number"><span><%- lessons %></span></td>
+<td class="date"><span><%- getDate(start) %></span></td>
+<td class="date"><span><%- getDate(end) %></span></td>
+<td><%- courseAbbr %><% if(courseName) {%> - <%- courseName %><%}%></td>

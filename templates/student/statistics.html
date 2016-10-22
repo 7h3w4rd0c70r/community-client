@@ -1,0 +1,23 @@
+<div class="panel panel-default">
+    <div class="panel-heading">Attendance Statistics</div>
+    <div class="panel-body">
+        <table class="table ">
+            <tbody>
+            <tr>
+                <td>Lessons in total</td>
+                <td><%- taught%> taught</td>
+                <td><%- total%> planned</td>
+            </tr>
+            <tr>
+                <td>Present at</td>
+                <td><h2><%- absence%>%</h2></td>
+                <td><%- present%> lessons</td>
+            </tr>
+            <tr>
+                <td>Absent from</td>
+                <td><%- excused%> excused</td>
+                <td><%- unexcused%> unexcused</td>
+            </tbody>
+        </table>
+    </div>
+</div>

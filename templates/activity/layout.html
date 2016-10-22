@@ -1,0 +1,78 @@
+<h2 class="col-sm-2">Activities <a href="#activity/add" class="btn btn-primary btn-lg">Add</a></h2>
+<div class="col-sm-10 col-md-6">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <form class="form-horizontal" role="form">
+                <div class="form-group">
+                    <div class="col-xs-12">
+                        <div class="input-group">
+                            <input id="search-input"
+                                   class="form-control"
+                                   type="search"
+                                   maxlength="255"
+                                   value="<%- keyword %>"
+                                   placeholder="Type your search words here"/>
+                            <div class="input-group-btn">
+                                <button id="search-btn" class="btn btn-primary" type="submit"><span
+                                        class="glyphicon glyphicon-search"></span>
+                                    Search
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-xs-4 col-sm-2 col-lg-1" for="duration">Duration</label>
+                    <div class="col-xs-8">
+                        <div class="col-xs-4">
+                            <select class="form-control" id="condition">
+                                <option value="smaller"
+                                <% if(condition == "smaller"){%>selected="selected"<%}%>><=</option>
+                                <option value="equal"
+                                <% if(condition == "equal"){%>selected="selected"<%}%>>=</option>
+                                <option value="bigger"
+                                <% if(condition == "bigger"){%>selected="selected"<%}%>>></option>
+                            </select>
+                        </div>
+                        <div class="input-group col-xs-8">
+                            <input class="form-control"
+                                   type="number"
+                                   size="4"
+                                   id="duration"
+                                   step="5"
+                                   min="0"
+                                   value="<%- duration %>"
+                                   alt="Write here duration"/>
+                            <div class="input-group-addon">Minutes</div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="col-sm-12">
+    <a title="Show Activities in a Detailed List" href="#activities/detailedList"
+       class="view-button-1' detailed-list-icon"></a>
+    <a title="List Activities." href="#activities/list" class="view-button-2' list-icon"></a>
+    <a id="refresh-button" title="Refresh Data" class="view-button-3' refresh-icon"></a>
+</div>
+
+<div class="col-sm-12">
+    <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="active">
+            <a href="#private" aria-controls="private" role="tab" data-toggle="tab">My Library <span class="badge"><%- private %></span></a>
+        </li>
+        <li role="presentation">
+            <a href="#public" aria-controls="public" role="tab" data-toggle="tab">Public Library <span class="badge"><%- public %></span></a>
+        </li>
+    </ul>
+    <div class="panel panel-default no-top-border">
+        <div class="panel-body">
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="private"></div>
+                <div role="tabpanel" class="tab-pane " id="public"></div>
+            </div>
+        </div>
+    </div>
+</div>

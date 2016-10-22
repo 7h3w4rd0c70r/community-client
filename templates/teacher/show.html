@@ -1,0 +1,57 @@
+<h2 class="col-lg-12"><% if(personID===null){%> New <%}%>Teacher</h2>
+<div class="col-lg-12">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <form role="form" class="form-horizontal">
+                <div class="form-group">
+                    <label class="control-label col-sm-3 col-lg-2" for="abbr">Abbreviation</label>
+                    <div class="col-sm-2">
+                        <p id="abbr" class="form-control-static"><%- abbr %></p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-3 col-lg-2" for="fullName">Full Name</label>
+                    <div class="col-sm-9 col-lg-10">
+                        <p id="fullName" class="form-control-static"><%- fullName %></p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-3 col-lg-2" for="email">Email</label>
+                    <div class="col-sm-9 col-lg-10">
+                        <p id="email" class="form-control-static"><%- email %></p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-3 col-lg-2" for="start">Start</label>
+                    <div class="col-sm-9 col-lg-10">
+                        <p id="start" class="form-control-static"><%- getDatePart(start) %></p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-3 col-lg-2" for="end">End</label>
+                    <div class="col-sm-9 col-lg-10">
+                        <p id="end" class="form-control-static"><%- getDatePart(end) %></p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-3 col-lg-2" for="icon">Icon</label>
+                    <div class="col-sm-9 col-lg-10">
+                        <div class="teacher-icon-list">
+                            <div id="icon" class="teachers teacher-<%- icon%>" data-value="<%- icon%>"></div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="panel-footer">
+            <input class="btn btn-primary" type="button" id="back" value="Back"/>
+            <% if (isAdmin()){%>
+            <input class="btn btn-primary" type="button" id="edit" value="Edit"/>
+            <%}%>
+            <input class="btn btn-primary" type="button" id="invite-button" hidden="hidden" value="Connect to School"/>
+            <span id="invite-action"></span>
+        </div>
+    </div>
+</div>
+<div id="lessons" class="col-sm-12"></div>
+<div id="invite-dialog" class="col-sm-12 modal fade" role="dialog"></div>

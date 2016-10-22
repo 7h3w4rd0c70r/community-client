@@ -1,0 +1,11 @@
+<div class="panel-heading <%- getStatusClass(status,getUserRole(),getDateFromJSON(start)) %>">
+    <span><%- getStatusClass(status,getUserRole(),getDateFromJSON(start)) %></span>
+</div>
+<div class="panel-body">
+    <div><%- getDay(start) %></div>
+    <div><%- getDayName(start)%></div>
+    <small><%- getTime(start) %> - <%- getTime(end)%></small>
+    <div class="<% if(isValidDuration(start,end)){%>red<%} %>">
+        <small><%- getDuration(start,end)%> minutes</small>
+    </div>
+</div>

@@ -1,0 +1,34 @@
+<td></td>
+<td>
+    <div class="flag <%- getStatusClass(status,'admin', start)%>"></div>
+    <span><%- getStatusClassText(status,'admin', start)%></span>
+</td>
+<td>
+    <span class="visible-sm"><%- getShortDayName(start) %></span>
+    <span class="hidden-sm"><%- getDayName(start) %></span>
+</td>
+<td>
+    <span><%- getDate(start) %></span>
+</td>
+<td>
+    <span><%- getTime(start) %></span>
+</td>
+<td>
+    <span><%- getTime(end) %></span>
+</td>
+<td>
+    <span><%- getDuration(start, end) %></span>
+    <span class="visible-sm"> min</span>
+    <span class="hidden-sm"> minutes</span>
+</td>
+<td>
+    <div class="es group-<%- groupID%>"></div>
+</td>
+<td>
+    <div class="es course-<%- courseID%>"></div>
+</td>
+<td>
+    <% _.each( teachers, function(teacher){ %>
+    <div class="es teacher-<%- teacher.personID %>"></div>
+    <% }); %>
+</td>

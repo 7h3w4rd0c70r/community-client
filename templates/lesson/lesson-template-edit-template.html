@@ -1,0 +1,42 @@
+<div class="split-part">
+    <label for="title">Title</label>
+    <input id="title" name="title" type="text" value="<%- title %>" required placeholder="of a Lesson"/>
+    <br/>
+
+    <label for="duration">Duration</label>
+    <input id="duration" name="duration" type="number"
+           value="<%- duration %>"
+           class="number" min="0" max="300"
+           required/> min.
+    <br/>
+
+    <label for="descriptionA"><%- labelDescriptionA() %></label>
+    <textarea id="descriptionA" name="descriptionA" class="description">asa</textarea>
+    <br/>
+
+    <label for="descriptionB"><%- labelDescriptionB() %></label>
+    <textarea id="descriptionB" name="descriptionB" class="description"><%- descriptionB %></textarea>
+    <br/>
+
+    <label for="descriptionC"><%- labelDescriptionC() %></label>
+    <textarea id="descriptionC" name="descriptionC" class="description"><%- descriptionC %></textarea>
+    <br/>
+
+    <label for="materials">Materials</label>
+    <textarea id="materials" name="materials" class="description"
+              placeholder="things you'll needed"><%- materials %></textarea>
+    <br/>
+</div>
+<div class="split-part">
+    <h3>Activities</h3>
+    <table id="activities">
+        <tr>
+            <th>Order/Duration</th>
+            <th>Activity</th>
+        </tr>
+    </table>
+</div>
+<div class="buttons">
+    <input class="left-button" type="button" id="back" value="Back">
+    <input class="left-button" type="button" id="save" value="Save">
+</div>

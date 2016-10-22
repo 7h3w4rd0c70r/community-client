@@ -1,0 +1,134 @@
+@import "colors.less";
+
+table {
+  font-size: 15px;
+  border-collapse: collapse;
+  border: 1px solid @face;
+
+  input[type="checkbox"] {
+    top: 0;
+  }
+}
+
+.list {
+  position: absolute;
+  display: block;
+  top: 41px;
+  bottom: 40px;
+  left: 0px;
+  right: 0px;
+  min-height: 370px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  border-top: 1px solid @frame-line;
+  border-bottom: 1px solid @frame-line;
+}
+
+th {
+  text-align: left;
+  background: @face;
+  color: @header-text;
+  border-right: 1px solid @frame-line;
+  border-bottom: 1px solid @frame-line;
+  border-top: 1px solid @frame-line;
+}
+
+th {
+  padding-right: 3px;
+  padding-left: 3px;
+}
+
+tr.is-active {
+  background-color: @lampa-red !important;
+}
+
+tr {
+  width: 100%;
+  border-top: 1px solid @top-line;
+  border-bottom: 1px solid @face;
+
+}
+
+tr:nth-child(even) {
+  background: @even
+}
+
+tr:nth-child(odd) {
+  background: @odd
+}
+
+tr:hover {
+  background: @hover;
+}
+
+tr:hover.is-active {
+  background-color: darkRed !important;
+  color: white;
+}
+
+.text {
+  text-align: left;
+  min-width: 50px;
+}
+
+.number {
+  text-align: right;
+  min-width: 50px;
+}
+
+.checkbox {
+  text-align: center;
+  min-width: 50px;
+}
+
+.form {
+  width: auto;
+  border: none;
+  td, th, tr, tr:hover, tr:nth-child(even), tr:nth-child(odd) {
+    background: transparent;
+    border: none;
+  }
+  label {
+    width: auto;
+  }
+}
+
+.numbered {
+  tbody {
+    counter-reset: rowNumber;
+  }
+
+  tr {
+    counter-increment: rowNumber;
+  }
+
+  tr > td:first-child::before {
+    content: counter(rowNumber) + '. ';
+    min-width: 1em;
+    margin-right: 0.5em;
+  }
+}
+
+.counted {
+  tbody {
+    counter-reset: countedRowNumber;
+  }
+  tr {
+    color: black !important;
+  }
+  tr.reported,
+  tr.no-show {
+    counter-increment: countedRowNumber;
+  }
+
+  tr.reported td:first-child::before,
+  tr.no-show td:first-child::before {
+    content: counter(countedRowNumber) + '. ';
+    min-width: 1em;
+    margin-right: 0.5em;
+  }
+}
+
+td.size1 {
+  width: 100px;
+}

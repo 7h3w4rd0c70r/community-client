@@ -1,0 +1,35 @@
+<td></td>
+<td>
+    <div class="flag <%- getStatusClass(status,'admin', start)%>"></div>
+    <span><%- getStatusClassText(status,'admin', start)%></span>
+</td>
+<td>
+    <span class="visible-sm"><%- getShortDayName(start) %></span>
+    <span class="hidden-sm"><%- getDayName(start) %></span>
+</td>
+<td>
+    <span><%- getDate(start) %></span>
+</td>
+<td>
+    <span><%- getTime(start) %> - <%- getTime(end) %></span>
+</td>
+<td>
+    <span><%- getDuration(start, end) %> </span>
+    <span class="visible-sm">min</span>
+    <span class="hidden-sm">minutes</span>
+</td>
+<td>
+    <div class="group-<%- groupID%>"></div>
+</td>
+<td>
+    <div class="location-<%- locationID%>"></div>
+</td>
+<td>
+    <div class="course id-<%- courseID%>"></div>
+</td>
+<td>
+    <div><% _.each( teachers, function(teacher){ %><div class="teacher-<%- teacher.personID %>"></div><% }); %></div>
+</td>
+<td><%- getAbsenceStatus(status, getDateFromJSON(start), isPresent, isExcused)%></td>
+<td><%- note %></td>
+

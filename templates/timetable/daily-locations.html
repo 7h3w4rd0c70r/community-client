@@ -1,0 +1,28 @@
+<h2>Daily Locations Timetable</h2>
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <div class="row">
+            <form class="form-inline">
+                <div class="col-sm-12">
+                    <button id="last-day" class="btn btn-default">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                    </button>
+                    <div class="input-group date-picker">
+                        <input id="day" type="text" maxlength="10" class="form-control" value="<%- day %>">
+                        <div class="input-group-addon">
+                            <span class="glyphicon glyphicon-calendar"></span>
+                        </div>
+                    </div>
+                    <button id="next-day" class="btn btn-default">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                    </button>
+                </div>
+            </form>
+            <div id="days" class="col-sm-0"></div>
+        </div>
+    </div>
+    <div class="panel-body">
+        <div id="time"></div>
+        <div id="lessons"></div>
+    </div>
+</div>

@@ -1,0 +1,46 @@
+<div class="container index">
+    <div class="row">
+        <div class="col-sm-2">
+            <img src="<%- getAvatarUriByID(accountID) %>" alt="Profile picture" width="100%" class="img-thumbnail img-responsive"/>
+        </div>
+        <div class="col-sm-7">
+            <h1>
+                <%- fullName %>
+                <% if(nickname && !/$\s*^/.test(String(nickname))) { %>
+                <small>
+                    <%- nickname %>
+                </small>
+                <% } %>
+            </h1>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="form-horizontal">
+            <div class="form-group">
+                <label class="col-sm-offset-1 col-sm-2 control-label" for="nickname">Nickname</label>
+                <div class="col-sm-7">
+                    <input id="nickname" type="text" class="form-control" value="<%- nickname %>" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-offset-1 col-sm-2 control-label" for="summary">My summary</label>
+                <div class="col-sm-7">
+                    <textarea id="summary" class="form-control"><%- summary %></textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-offset-1 col-sm-2 control-label" for="goal">My goal as a teacher</label>
+                <div class="col-sm-7">
+                    <textarea id="goal" class="form-control"><%- goal %></textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-offset-1 col-sm-2 control-label" for="interests"></label>
+                <div class="col-sm-7">
+                    <textarea id="interests" class="form-control"><%- interests %></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

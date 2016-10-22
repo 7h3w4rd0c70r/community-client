@@ -1,0 +1,243 @@
+@import "font.less";
+@import "sizes.less";
+@import "colors.less";
+
+@lesson-bar-height: 144px;
+
+.new {
+  background-color: @new;
+  color: black;
+}
+
+.taught {
+  background-color: @taught;
+  color: white;
+}
+
+.reported {
+  background-color: @reported;
+  color: white;
+}
+
+.not-reported {
+  background-color: @not-reported;
+  color: white;
+}
+
+.no-show {
+  background-color: @no-show;
+  color: white;
+}
+
+.planned {
+  background-color: @planned;
+  color: black !important;
+}
+
+.postponed {
+  background-color: @postponed;
+  color: white;
+}
+
+.not-planned {
+  background-color: @not-planned;
+  color: black;
+  z-index: 50;
+}
+
+.canceled {
+  background-color: @canceled;
+  z-index: 10;
+  color: white;
+}
+
+.box {
+  .new {
+    background-color: @new !important;
+    color: black;
+  }
+
+  .taught {
+    background-color: @taught !important;
+    color: white;
+  }
+
+  .reported {
+    background-color: @reported !important;
+    color: white;
+  }
+
+  .not-reported {
+    background-color: @not-reported !important;
+    color: white;
+  }
+
+  .no-show {
+    background-color: @no-show !important;
+    color: white;
+  }
+
+  .planned {
+    background-color: @planned !important;
+    color: black !important;
+  }
+
+  .postponed {
+    background-color: @postponed !important;
+    color: white;
+  }
+
+  .not-planned {
+    background-color: @not-planned !important;
+    color: black;
+    z-index: 50;
+  }
+
+  .canceled {
+    background-color: @canceled !important;
+    z-index: 10;
+    color: white;
+  }
+}
+
+.flag {
+  display: inline-block;
+  width: 10px;
+  height: 12px;
+  margin: 0;
+  padding: 0;
+}
+
+.lesson-small-status-bar {
+  display: inline-block;
+  position: relative;
+  width: 10px;
+  height: 100%;
+  background-color: transparent;
+}
+
+.lesson-status-bar {
+  display: inline-block;
+  position: relative;
+  width: 38px;
+  height: @lesson-bar-height;
+  top: 1px
+}
+
+.teacher {
+  display: inline-block;
+  position: relative;
+  top: 0;
+  width: auto;
+  height: auto;
+}
+
+#neighbours, .neighbours {
+  .left {
+    position: relative;
+    left: 0;
+    top: 0;
+  }
+  .right {
+    position: relative;
+    left: 0;
+    top: 0;
+  }
+}
+
+span.taught,
+.lesson.taught {
+  background-color: @item-background;
+  border: @lesson-border-size solid @taught;
+  z-index: 50;
+}
+
+span.reported,
+.lesson.reported {
+  background-color: @item-background;
+  border: @lesson-border-size solid @reported;
+  z-index: 50;
+}
+
+span.not-reported,
+.lesson.not-reported {
+  background-color: @item-background;
+  box-shadow: 0px 0px 15px @not-reported;
+  border: @lesson-border-size solid @not-reported;
+  z-index: 50;
+}
+
+span.no-show,
+.lesson.no-show {
+  background-color: @item-background;
+  border: @lesson-border-size solid @no-show;
+  color: white;
+  z-index: 50;
+}
+
+span.planned,
+.lesson.planned {
+  background-color: @item-background;
+  border: @lesson-border-size solid @planned;
+  z-index: 50;
+}
+
+span.postponed,
+.lesson.postponed {
+  background-color: @item-background;
+  border: @lesson-border-size solid @postponed;
+  z-index: 1;
+}
+
+span.not-planned,
+.lesson.not-planned {
+  background-color: @item-background;
+  border: @lesson-border-size solid @not-planned;
+  z-index: 50;
+}
+
+span.canceled,
+.lesson.canceled {
+  background-color: @item-background;
+  border: @lesson-border-size solid @canceled;
+  color: white;
+  z-index: 50;
+}
+
+#plan {
+  @width: 608px;
+  label, .label {
+    width: 70px;
+  }
+  input {
+    width: @width;
+    max-width: @width;
+    margin-right: 0;
+  }
+
+  p, textarea {
+    width: @width + 2px;
+    margin-right: 0;
+  }
+}
+
+.activity {
+  h3 {
+    font-size: 15px;
+    margin: 0;
+  }
+}
+
+tbody, .panel-body {
+  .present {
+    background-color: @present;
+  }
+
+  .excused {
+    background-color: @excused;
+  }
+
+  .unexcused {
+    background-color: @unexcused;
+  }
+}

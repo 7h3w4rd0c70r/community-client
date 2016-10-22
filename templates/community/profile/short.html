@@ -1,0 +1,16 @@
+<div class="row" style="margin: 5px 0px 5px 0px;">
+    <div class="col-sm-1">
+        <img src="<%- getAvatarUriByID(accountID) %>" alt="Profile picture" width="100%" class="img-thumbnail img-responsive"/>
+    </div>
+    <div class="col-sm-7">
+        <h1 class="showProfile">
+            <%- fullName %>
+        </h1>
+    </div>
+    <div class="col-sm-4">
+        <div class="btn-group">
+            <button type="button" class="btn btn-primary btn-lg" id="followBtn">Follow</button>
+            <button type="button" class="btn btn-default btn-lg" id="unfollowBtn">Unfollow</button>
+        </div>
+    </div>
+</div>

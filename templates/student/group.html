@@ -1,0 +1,26 @@
+<td><p class="form-control-static"><%- abbr %></p></td>
+<td><p class="form-control-static"><%- name %></p></td>
+<td class="form-group">
+    <div class="input-group date-picker ">
+        <input type="text" maxlength="10" class="start form-control input-sm"
+               value="<%- getDatePart(start) %>">
+        <div class="input-group-addon">
+            <span class="glyphicon glyphicon-calendar"></span>
+        </div>
+    </div>
+</td>
+<td class="form-group">
+    <div class="input-group date-picker">
+        <input type="text" maxlength="10" class="end form-control input-sm"
+               value="<%- getDatePart(end) %>">
+        <div class="input-group-addon">
+            <span class="glyphicon glyphicon-calendar"></span>
+        </div>
+    </div>
+</td>
+<td class="text-right">
+    <% if(isAdmin()){ %>
+    <button type="button" class="btn btn-primary btn-sm delete">X</button>
+    <% } %>
+</td>
+

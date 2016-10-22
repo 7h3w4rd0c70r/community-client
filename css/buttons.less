@@ -1,0 +1,73 @@
+
+input[type="button"],
+input[type="submit"] {
+  background: @item-background;
+  color: #000000;
+  border-color: @item-border;
+  font-size: 15px;
+  margin: 5px 5px 2px 1px;
+  padding-left: 1px;
+  padding-right: 1px;
+}
+
+.buttons {
+  position: relative;
+  display: block;
+  text-align: right;
+  padding-right: 2px;
+}
+
+.small-buttons {
+  display: inline-block;
+  position: relative;
+  width: 16px;
+  height: 21px;
+  padding: 0;
+  margin-right: 3px;
+  margin-left: 3px;
+  text-decoration: none;
+  background: url('images/buttons_complete.svg') no-repeat scroll 0% 0%, none repeat scroll 0% 0% transparent;
+  background-position: center center;
+  cursor: pointer;
+}
+
+.up {
+  background-position: 0px 0px;
+}
+
+.up:hover {
+  background-position: 0px -21px;
+}
+
+.down {
+  background-position: -17px 0px;
+}
+
+.down:hover {
+  background-position: -17px -21px;
+}
+
+.delete {
+  background-position: -51px 0px;
+}
+
+.delete:hover {
+  background-position: -51px -21px;
+}
+
+input[type="button"]:disabled,
+input[type="submit"]:disabled {
+  background: @item-border;
+  color: white;
+  border-color: @item-border;
+  cursor: none;
+}
+
+#close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: black;
+  display: none;
+  z-index: 10;
+}

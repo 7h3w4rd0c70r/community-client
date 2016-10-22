@@ -1,0 +1,69 @@
+<h2 class="col-lg-12">Group</h2>
+<div class="col-lg-12">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <form role="form" class="form-horizontal">
+                <div class="form-group">
+                    <label class="control-label col-sm-3" for="courseName">Course</label>
+                    <div class="col-sm-8">
+                        <p id="courseName" class="form-control-static"><%- courseAbbr %><% if(courseName) {%> - <%-
+                            courseName %><%}%></p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-3">Abbreviation</label>
+                    <div class="col-sm-8">
+                        <p class="form-control-static"><%- abbr %></p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-3">Name</label>
+                    <div class="col-sm-8">
+                        <p class="form-control-static"><%- name %></p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-3">Capacity</label>
+                    <div class="col-sm-8">
+                        <p class="form-control-static"><%- capacity %></p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-3">Start</label>
+                    <div class="col-sm-8">
+                        <p class="form-control-static"><%- getDate(start)%></p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-3">End</label>
+                    <div class="col-sm-8">
+                        <p class="form-control-static"><%- getDate(end)%></p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-3">Icon</label>
+                    <div class="col-sm-8">
+                        <div class="groups group-<%- icon%>"></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-3">Description</label>
+                    <div class="col-sm-8">
+                        <p class="form-control-static"><%- description %></p>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="panel-footer">
+            <input class="btn btn-primary" type="button" id="back" value="Back"/>
+            <% if (isAdmin()){%>
+            <input class="btn btn-primary" type="button" id="edit" value="Edit"/>
+            <input class="btn btn-danger" type="button" id="delete" value="Delete"/>
+            <% } %>
+        </div>
+    </div>
+</div>
+<div id="students" class="col-lg-12"></div>
+<div id="lessons" class="col-lg-12"></div>
+<div id="add-student-modal" class="modal fade" role="dialog"></div>
+

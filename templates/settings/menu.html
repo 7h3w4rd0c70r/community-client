@@ -1,0 +1,32 @@
+<ul class="nav nav-pills nav-stacked">
+    <li role="presentation"
+        id="school-link"
+        class="<%- isActive(selected,'school-link') %>">
+        <a href="#school" class="btn btn-default ">School</a>
+    </li>
+    <li role="presentation"
+        id="course-list-link"
+        class="<%- isActive(selected,'course-list-link,course-add-link') %>">
+        <a href="#courses" class="btn btn-default ">Courses</a>
+    </li>
+    <li role="presentation"
+        id="group-list-link"
+        class="<%- isActive(selected,'group-list-link,group-add-link') %>">
+        <a href="#groups" class="btn btn-default ">Groups</a>
+    </li>
+    <li role="presentation"
+        id="location-list"
+        class="<%- isActive(selected,'location-list-link,location-add-link') %>">
+        <a href="#locations" class="btn btn-default ">Locations</a>
+    </li>
+    <li role="presentation"
+        id="teacher-list-link"
+        class="<%- isActive(selected,'teacher-list-link,teacher-add-link') %>">
+        <a href="#teachers" class="btn btn-default "> Teachers</a>
+    </li>
+    <li role="presentation"
+        id="student-list-link"
+        class="<%- isActive(selected,'student-list-link,student-add-link') %>">
+        <a href="#students" class="btn btn-default">Students</a>
+    </li>
+</ul>

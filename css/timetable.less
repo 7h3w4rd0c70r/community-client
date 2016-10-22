@@ -1,0 +1,190 @@
+@day-column-width: 82px;
+@grid-width: 90%;
+@lesson-height: 200px;
+@lesson-border-size: 3px;
+@lesson-text-size: 12px;
+@time-line-height: 22px;
+
+@import "lampa-colors.less";
+
+.history {
+  background-color: @history;
+}
+
+.now {
+  background-color: @now;
+}
+
+.future {
+  background-color: @future;
+}
+
+.item {
+  position: relative;
+  display: block;
+  height: @lesson-height+5px;
+}
+
+#days {
+  position: static;
+  height: auto;
+  letter-spacing: normal;
+  word-spacing: normal;
+}
+
+#days-window {
+  overflow: auto;
+  position: absolute;
+  top: 16px;
+  min-height: @min-content-height - @time-line-height;
+  width: 100%;
+  letter-spacing: normal;
+  word-spacing: normal;
+}
+
+#time {
+  height: @time-line-height;
+  overflow: hidden;
+  letter-spacing: normal;
+  word-spacing: normal;
+}
+
+.days-window {
+  overflow: auto;
+  position: relative;
+  top: @time-line-height;
+  min-height: @min-content-height - @time-line-height;
+  width: 100%;
+  letter-spacing: normal;
+  word-spacing: normal;
+}
+
+.grid-title,
+.item-header {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: @day-column-width;
+  vertical-align: middle;
+  text-align: center;
+  height: auto;
+  border-bottom: 1px solid @borders;
+  overflow: hidden;
+}
+
+.time-line {
+  position: fixed;
+  left: @day-column-width;
+  right: 0;
+}
+
+.hour {
+  position: absolute;
+  display: block;
+  border-radius: 0;
+  text-align: left;
+  margin: 1px;
+  min-width: 30px;
+  padding: 0;
+  padding-left: 3px;
+  overflow: hidden;
+  vertical-align: top;
+  border-left: 1px solid @borders;
+}
+
+.hour:first-child {
+  border-left: 1px solid transparent;
+}
+
+.hour:last-child {
+  border-right: 1px solid transparent;
+}
+
+.panel {
+  #time {
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid @borders;
+  }
+  .time-line {
+    position: absolute;
+  }
+}
+
+//.hour:nth-child(even) {  background: black;}
+
+#days-header {
+  position: absolute;
+  top: 0;
+  height: auto;
+  width: 100%;
+  letter-spacing: normal;
+  word-spacing: normal;
+}
+
+.days-header {
+  position: relative;
+  top: 0;
+  height: auto;
+  width: 100%;
+  letter-spacing: normal;
+  word-spacing: normal;
+  background-color: @background-gray;
+}
+
+@grid-width: 90%;
+@lesson-height: 175px;
+@lesson-border-size: 3px;
+@lesson-text-size: 12px;
+
+.lessons-grid {
+  width: @grid-width;
+  height: @lesson-height;
+  background-color: @background-gray;
+  border: 1px solid @item-border;
+  hr {
+    position: absolute;
+    width: @grid-width;
+  }
+}
+
+.grid-title {
+  height: @time-line-height;
+}
+
+.item-lessons {
+  position: absolute;
+  top: 0;
+  left: @day-column-width;
+  right: 0;
+  bottom: 0;
+  display: inline-block;
+  height: auto;
+  border-bottom: 1px solid @borders;
+  border-left: 1px solid @borders;
+}
+
+.lesson {
+  display: inline-block;
+  position: absolute;
+  min-width: 30px;
+  height: 100%;
+  margin: 0;
+  padding: 0 !important;
+  text-align: center;
+  text-decoration: none;
+  overflow: hidden;
+  vertical-align: top;
+  border-radius: 5px;
+  color: #000;
+  background-color: rgba(226, 231, 235, .7);
+  font-size: 12px;
+  line-height: 16px;
+  box-sizing: border-box;
+}
+
+.abbr {
+  color: black !important;
+}

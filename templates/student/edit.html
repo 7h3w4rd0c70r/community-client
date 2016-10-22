@@ -1,0 +1,49 @@
+<h2 class="col-sm-12">Student</h2>
+<div class="col-sm-12 ">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <form role="form" class="form-horizontal">
+                <div class="form-group">
+                    <label for="fullName" class="control-label col-sm-2">Full Name</label>
+                    <div class="col-sm-10">
+                        <p id="fullName" class="form-control-static"><%- fullName %></p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="firstName" class="control-label col-sm-2">First Name</label>
+                    <div class="col-sm-10">
+                        <input id="firstName" type="text" value="<%- firstName %>" maxlength="100" required="required"
+                               class="form-control"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="lastName" class="control-label col-sm-2">Last Name</label>
+                    <div class="col-sm-10">
+                        <input id="lastName" type="text" value="<%- lastName %>" maxlength="100" required="required"
+                               class="form-control"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email" class="control-label col-sm-2">Email</label>
+                    <div class="col-sm-10">
+                        <input id="email" type="email" value="<%- email %>" maxlength="100" required="required"
+                               class="form-control"/>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="panel-footer">
+            <input class="btn btn-primary" type="button" id="back" value="Back"/>
+        </div>
+    </div>
+</div>
+<div class="col-sm-12">
+    <div class="panel panel-default">
+        <div class="panel-heading">Groups</div>
+        <div class="panel-body">
+            <form id="groups" role="form" class="form-horizontal"></form>
+        </div>
+        <div class="panel-footer" id="add-to-group"></div>
+    </div>
+</div>
+<div id="lessons" class="col-sm-12"></div>

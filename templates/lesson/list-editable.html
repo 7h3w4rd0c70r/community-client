@@ -1,0 +1,35 @@
+<div class="panel-heading"><h4>Lessons</h4></div>
+<div class="panel-body">
+    <table class="table table-striped table-responsive table-hover numbered">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>Status</th>
+            <th>Day</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Duration</th>
+            <th>Location</th>
+            <th>Group</th>
+            <th>Course</th>
+            <th>Teacher</th>
+            <th class="text-right">
+                <button class="btn btn-default" id="check-all">Select All</button>
+                <button class="btn btn-default" id="un-check-all" style="display: none">Clear All</button>
+            </th>
+        </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</div>
+<div class="panel-footer">
+    <% if(isAdmin()) {%>
+    <form class="form-inline">
+        <div class="row">
+            <div class="form-group text-right col-sm-12">
+                <button id="delete" class="btn btn-danger">Delete Selected</button>
+            </div>
+        </div>
+    </form>
+    <% } %>
+</div>

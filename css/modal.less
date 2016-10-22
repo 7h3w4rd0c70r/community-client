@@ -1,0 +1,80 @@
+#modal {
+  position: absolute;
+  display: none;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  padding: 2px;
+  background: @transparent-background !important;
+
+  label {
+    width: auto;
+  }
+  input {
+    margin: 0;
+    padding: 0;
+    width: auto;
+  }
+
+  input[type="checkbox"] {
+    padding-left: 15px;
+  }
+
+  input[type="radio"] {
+    padding-left: 15px;
+    margin-top: 11px;
+  }
+
+  input[type="button"] {
+    display: inline-block;
+    width: 180px;
+    height: 40px;
+    color: Black;
+  }
+
+  .buttons {
+    position: absolute;
+    height: 50px;
+    width: 100%;
+    bottom: 15px;
+    text-align: center;
+  }
+
+  form {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .popup-min-size, .popup-max-size {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+    background: @item-background;
+    z-index: 5;
+  }
+
+  .popup-min-size {
+    width: 500px;
+    height: 500px;
+  }
+
+  .popup-max-size {
+    width: 801px;
+    height: 570px;
+    overflow-y: auto;
+
+    input[type="button"] {
+      display: inline-block;
+      margin-top: 5px;
+      margin-left: 0;
+      width: 132px;
+      height: 40px;
+      color: Black;
+    }
+  }
+}

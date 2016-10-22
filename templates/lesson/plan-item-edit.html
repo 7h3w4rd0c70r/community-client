@@ -1,0 +1,68 @@
+<div class="well <% if(status == 1) { %> done<% }%>">
+    <div class="row">
+        <div class="top-buttons">
+            <button class="up btn btn-default btn-sm" data-toggle="tooltip" title="Move this activity up">
+                <span class="glyphicon glyphicon-triangle-top"></span>
+            </button>
+            <button class="delete-button delete btn btn-default btn-sm" data-toggle="tooltip"
+                    title="Delete this activity">
+                <span class="glyphicon glyphicon-remove"></span>
+            </button>
+            <button class="down btn btn-default btn-sm" data-toggle="tooltip" title="Move this activity down">
+                <span class="glyphicon glyphicon-triangle-bottom"></span>
+            </button>
+            <button class="export btn btn-default btn-sm <% if((name=='' || description=='' )&& activityID != null ){%> disabled <%}%>"
+                    data-toggle="tooltip"
+                    title="<% if (activityID == null)
+                {%>Save this activity to resources<%
+                } else {%>Open activity in resources<% } %>">
+                <span class="glyphicon glyphicon-book"></span>
+            </button>
+        </div>
+        <div class="col-xs-12">
+            <div class="input-group">
+                <input class="plan-name form-control input-sm"
+                       type="text"
+                       maxlength="90"
+                       value="<%- name %>"
+                       placeholder="Type activity title"
+                       data-toggle="tooltip"
+                       title="Headline">
+                <div class="input-group-addon">
+                    <label>
+                        <input type="checkbox"
+                               class="plan-checkbox"
+                               data-toggle="tooltip"
+                               title="This Activity is done"
+                        <%- checked(status) %>>
+                        Done
+                    </label>
+                </div>
+            </div>
+            <div class="input-group col-xs-12">
+                <% if (isEditing) {%>
+                <div class="form-control-static form-control plan-description" placeholder="Click to add/edit procedure"></div>
+                <% } else {%>
+                <div class="form-control-static to-edit plan-description bordered <% if(description ==' '){%>placeholder<%}%>">
+                    <%= description %>
+                    <% if(description ==""){%>Click to add/edit procedure<%} %>
+                </div>
+                <% } %>
+            </div>
+            <div class="input-group col-sm-3">
+                <input class="plan-duration form-control input-sm"
+                       type="number"
+                       min="0"
+                       max="1440"
+                       step="5"
+                       maxlength="4"
+                       data-toggle="tooltip"
+                       title="This activity duration"
+                       value="<%- duration %>"/>
+                <div class="input-group-addon">
+                    <span>Minutes</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
